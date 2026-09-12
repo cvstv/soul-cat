@@ -14,7 +14,7 @@ test('repeated scans preserve first seen; failures preserve listings; absence is
  let state=await readStore(db);assert.equal(state.cats[0].firstSeen,'2026-09-10T00:00:00Z');assert.equal(state.cats[0].lastSeen,'2026-09-11T00:00:00Z');assert.equal(state.cats[0].availability,'listed');assert.ok(state.sources[0].lastSuccess);
  await saveSource(db,{...source},[],'2026-09-13T00:00:00Z');state=await readStore(db);assert.equal(state.cats[0].availability,'not_listed');db.close();
 });
-test('database lock prevents duplicate refresh across connections',async()=>{
+test('database lock prevents overlapping manual and scheduled refresh',async()=>{
  const db=createClient({url:'file::memory:'});await migrate(db);const now=new Date();assert.ok(await beginScan(db,'manual',now));assert.equal(await beginScan(db,'scheduled',now),null);assert.ok(await beginScan(db,'manual',new Date(+now+300001)));db.close();
 });
 test('schedule is 8am, 1pm, 5pm Phoenix including UTC day rollover',()=>{

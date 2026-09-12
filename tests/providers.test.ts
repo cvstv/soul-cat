@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { ageMonths, ageFromDob, parseSavingOneLife, parseFriendsForLife, parseLostOurHome, parsePetango, safeUrl } from '../server/providers/parsers.js';
+import { cityFromLocation, ageMonths, ageFromDob, parseSavingOneLife, parseFriendsForLife, parseLostOurHome, parsePetango, safeUrl } from '../server/providers/parsers.js';
 import { registry } from '../server/providers/index.js';
 import { fetchPublicText, MAX_BYTES } from '../server/providers/transport.js';
 const sol = (breed: string, id: number) => `<div class="picture-item species-cat"><div class="picture-item__glyph"><img src="https://cdn.rescuegroups.org/6810/pictures/animals/22770/${id}/photo.jpg"></div><div class="picture-item__title">Peach</div><p class="item__breed-tag">${breed}</p><div class="my-pet-attributes"><span>Cat</span><span>Baby</span><span>Female</span></div><pre class="pf-description">Approximate DOB: 4/10/2026 | Playful kitten.</pre></div>`;
@@ -72,4 +72,29 @@ test('transport bounds streamed bytes and reports HTTP errors/challenges/blank b
       await assert.rejects(fetchPublicText('https://ws.petango.com/test'), expected);
     }
   } finally { globalThis.fetch = original; }
+});
+
+
+test('city inference uses only literal location evidence and preserves ambiguous or absent cities', () => {
+  assert.equal(cityFromLocation('3227 E. Bell Rd Phoenix,Az 85032'), 'Phoenix');
+  assert.equal(cityFromLocation('2901 W. Agua Fria Fwy. Phx. AZ. 85027'), 'Phoenix');
+  assert.equal(cityFromLocation('Foster Home'), 'Unknown');
+  assert.equal(cityFromLocation('Cat House::Room 2'), 'Unknown');
+  assert.equal(cityFromLocation('Foster in Gilbert'), 'Gilbert');
+  assert.equal(cityFromLocation('Sun City West adoption center'), 'Sun City West');
+  assert.equal(cityFromLocation('Mesa or Chandler'), 'Unknown');
+  assert.equal(cityFromLocation('Mesquite'), 'Unknown');
+  const ffl = parseFriendsForLife(asm([{ ...asmCat, DISPLAYLOCATION: 'Foster in Tempe' }]));
+  assert.equal(ffl[0].city, 'Tempe');
+});
+test('Petango retains its hidden individual location, including foster unknowns', () => {
+  const fixture = (location: string) => petango().replace('<div class="list-animal-name">', `<div class="list-animal-info-block"><div class="hidden">${location}</div></div><div class="list-animal-name">`);
+  const [cat] = parsePetango(fixture('3227 E. Bell Rd Phoenix,Az 85032'));
+  assert.equal(cat.location, '3227 E. Bell Rd Phoenix,Az 85032'); assert.equal(cat.city, 'Phoenix');
+  const [foster] = parsePetango(fixture('Foster Home'));
+  assert.equal(foster.location, 'Foster Home'); assert.equal(foster.city, 'Unknown');
+});
+test('SOL adoption text fragment locates the individual name with safe encoding', () => {
+  const [cat] = parseSavingOneLife(sol('Tortoiseshell', 123).replace('>Peach<', '>Peach &amp; Cream-Soda<'));
+  assert.equal(cat.adoptionUrl, 'https://www.savingonelife.org/adopt/available/#:~:text=Peach%20%26%20Cream%2DSoda');
 });

@@ -29,7 +29,17 @@ export function baseListing(sourceId: string, shelter: string, animalId: string,
   if (!animalId || !name) throw new Error('Source record missing animal identity; scan rejected');
   return { sourceId, shelter, animalId, name, adoptionUrl, ageMonths: null, sex: 'Unknown', breed: 'Unknown', coat: 'Unknown', confirmation: 'unknown', city: 'Unknown', location: 'Unknown', photo: null, adoptionFee: null, description: '' };
 }
+/** Infer only from the individual listing's location field, never shelter headquarters or biography. */
+export function cityFromLocation(location: string): string {
+  const cities = ['Fountain Hills', 'Apache Junction', 'Litchfield Park', 'Sun City West', 'Queen Creek', 'Cave Creek', 'Sun City', 'Scottsdale', 'Phoenix', 'Gilbert', 'Tempe', 'Mesa', 'Chandler', 'Glendale', 'Peoria', 'Surprise', 'Goodyear', 'Avondale', 'Buckeye', 'Carefree', 'El Mirage', 'Tolleson', 'Youngtown'];
+  const pattern = new RegExp(`\\b(?:${cities.join('|')})\\b`, 'gi');
+  const found = new Set([...location.matchAll(pattern)].map(match => cities.find(city => city.toLowerCase() === match[0].toLowerCase())!));
+  // An explicit local address abbreviation, as published by HALO.
+  if (/\bPhx\.?(?=[,\s]*(?:AZ|Arizona)\b)/i.test(location)) found.add('Phoenix');
+  return found.size === 1 ? [...found][0] : 'Unknown';
+}
 function finish(item: Listing): Listing {
+  item.city = cityFromLocation(item.location);
   // A color or breed label is evidence; photos and generic “calico”/“torbie” are not.
   item.confirmation = /\b(?:tortie|tortoiseshell)\b/i.test(`${item.coat} ${item.breed}`) ? 'confirmed' : 'unknown';
   return item;
@@ -45,8 +55,8 @@ export function parseSavingOneLife(html: string, now = new Date()): Listing[] {
     const node = $(element); const photo = safeUrl(node.find('.picture-item__glyph img').attr('src'));
     const id = photo?.match(/\/animals\/\d+\/(\d+)\//)?.[1] || '';
     const name = clean(node.find('.picture-item__title').text());
-    // This site's cards open an inline modal, so its official inventory is the durable adoption link.
-    const item = baseListing('saving-one-life', 'Saving One Life', id, name, SOL_URL);
+    // Native browser text fragments locate this cat in the shelter's inline-card inventory.
+    const item = baseListing('saving-one-life', 'Saving One Life', id, name, `${SOL_URL}#:~:text=${encodeURIComponent(name).replace(/-/g, '%2D')}`);
     item.photo = photo;
     item.breed = clean(node.find('.item__breed-tag').text()) || 'Unknown';
     item.coat = item.breed.match(/\b(?:Tortoiseshell|Tortie|Torbie|Calico|Tuxedo|Tabby)\b/i)?.[0] || 'Unknown';
@@ -73,7 +83,7 @@ export function parsePetango(html: string, sourceId = 'halo', shelter = 'HALO An
     item.photo = safeUrl(node.find('.list-animal-photo').attr('src'));
     item.ageMonths = ageMonths(text('age'));
     item.sex = text('sexSN') || 'Unknown'; item.breed = text('breed') || 'Unknown';
-    item.coat = text('color') || 'Unknown'; item.location = text('location') || 'Unknown';
+    item.coat = text('color') || 'Unknown'; item.location = text('location') || clean(node.find('.list-animal-info-block > .hidden').text()) || 'Unknown';
     cats.push(finish(item));
   });
   return requireResults(cats, shelter);

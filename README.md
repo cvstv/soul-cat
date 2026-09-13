@@ -2,6 +2,12 @@
 
 An open-source cat adoption inventory. React + TypeScript, SQLite locally, Turso on Netlify. One collector powers **Scan now** and the app's own scheduled refreshes. No ChatGPT account or automation is required.
 
+## Find a cat
+
+Search across names, breeds, coats, rescue names and descriptions. Combine age group, sex, city, shelter and coat filters; sort by age, name or observation date. Age groups use these boundaries: kittens under 12 months, young cats 1–under 3 years, adults 3–under 10 years, seniors 10+ years. Unknown ages are separately included or excluded.
+
+Save cats with the heart button to make a shortlist on this browser. Saved cats stay on your device and do not sync across browsers. Shared search links include search filters and sorting, but do not include your personal shortlist. Free-text search matches source text; it does not verify personality or compatibility claims.
+
 ## Run locally
 
 Requires Node 22.13+ and npm.

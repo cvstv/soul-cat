@@ -34,6 +34,12 @@ The production schedule is 8 AM, 1 PM and 5 PM America/Phoenix, represented in U
 
 The initial source registry targets Phoenix-area rescues. It is not a nationwide search service and does not claim access to every shelter. The coverage panel lists connected and pending sources explicitly. Add a provider in `server/providers/index.ts` to support another region or rescue; return the common `Listing` fields and add parser tests.
 
+Connected sources: Saving One Life, HALO, Friends for Life, Lost Our Home, Fearless Kitty, Kneading Kitty’s, and Maricopa County Animal Care & Control. Both manual and scheduled scans use this same registry.
+
+HALO, Friends for Life, Lost Our Home, Fearless Kitty, Kneading Kitty’s and Maricopa County link to individual animal profiles using the source’s animal ID. Saving One Life publishes inline profiles without a verified standalone URL; its button says “Find [name] on rescue page” and highlights the name where the browser supports text fragments. It is not represented as a dedicated profile link.
+
+Arizona Humane Society and Arizona Animal Welfare League currently challenge automated reads. Desert Paws’ embedded Petfinder feed denies automated access. Petfinder and Adopt a Pet do not yet have configured integrations. These remain visible as unconnected sources with direct browsing links; they are not counted as successful scans. Kneading Kitty’s count is checked against its complete public feed, and generic application placeholders are excluded.
+
 Only explicit shelter text confirms a coat. There is no automated visual coat classifier. Unknown fields remain unknown. Foster locations are not inferred from rescue headquarters. Shelter photos are linked externally and remain the property of their respective owners; the code license does not license their content. A source may cache its listings: our timestamp means when we read it, not a guarantee that the cat is still available.
 
 Failed sources retain previous inventory. Listings absent from a successful full feed become `not_listed`, never automatically `adopted`. Exact source/animal IDs deduplicate repeat scans. Listings across different shelters are not merged by name because that can combine unrelated cats.

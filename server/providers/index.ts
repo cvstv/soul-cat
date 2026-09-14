@@ -1,3 +1,5 @@
+import {collectMcacc,MCACC_URL} from './phoenix';
+import {collectKneading,KNEADING_URL} from './kneading';
 import type { Listing } from '../../src/types.js';
 import { FFL_URL, LOST_URL, SOL_URL, parseFriendsForLife, parseLostOurHome, parsePetango, parseSavingOneLife } from './parsers.js';
 import { fetchPublicText } from './transport.js';
@@ -11,11 +13,11 @@ export const registry: Provider[] = [
   { id: 'friends-for-life', name: 'Friends for Life Animal Rescue', url: FFL_URL, connected: true, collect: async () => parseFriendsForLife(await fetchPublicText('https://service.sheltermanager.com/asmservice?method=animal_view_adoptable_js&account=zp1008')) },
   { id: 'lost-our-home', name: 'Lost Our Home Pet Rescue', url: LOST_URL, connected: true, collect: async () => parseLostOurHome(await fetchPublicText(LOST_URL)) },
   { id: 'fearless-kitty', name: 'Fearless Kitty Rescue', url: 'https://fearlesskittyrescue.org/adoptable/', connected: true, collect: async () => parsePetango(await fetchPublicText(fearlessFeed), 'fearless-kitty', 'Fearless Kitty Rescue') },
-  { id: 'ahs', name: 'Arizona Humane Society', url: 'https://www.azhumane.org/adopt/', connected: false, reason: 'Public inventory integration not verified; browse shelter directly.' },
-  { id: 'mcacc', name: 'Maricopa County Animal Care & Control', url: 'https://www.maricopa.gov/214/Adopt-a-Pet', connected: false, reason: 'Interactive county inventory needs a verified supported integration.' },
-  { id: 'aawl', name: 'Arizona Animal Welfare League', url: 'https://aawl.org/', connected: false, reason: 'Public inventory integration not verified; browse shelter directly.' },
-  { id: 'desert-paws', name: 'Desert Paws Rescue', url: 'https://desertpawsrescue.org/adopt', connected: false, reason: 'Public listing feed has not been verified.' },
-  { id: 'kneading-kitty', name: 'Kneading Kitty’s Rescue', url: 'https://kneadingkittysrescueaz.com/', connected: false, reason: 'Public listing feed has not been verified.' },
+  { id: 'ahs', name: 'Arizona Humane Society', url: 'https://www.azhumane.org/adopt/', connected: false, reason: 'The shelter website blocks automated reads; browse its listings directly.' },
+  { id: 'mcacc', name: 'Maricopa County Animal Care & Control', url: MCACC_URL, connected: true, collect: () => collectMcacc() },
+  { id: 'aawl', name: 'Arizona Animal Welfare League', url: 'https://aawl.org/', connected: false, reason: 'The shelter website blocks automated reads; browse its listings directly.' },
+  { id: 'desert-paws', name: 'Desert Paws Rescue', url: 'https://desertpawsrescue.org/adopt', connected: false, reason: 'Its embedded Petfinder feed currently denies automated access.' },
+  { id: 'kneading-kitty', name: 'Kneading Kitty’s Rescue', url: KNEADING_URL, connected: true, collect: collectKneading },
   { id: 'petfinder', name: 'Petfinder', url: 'https://www.petfinder.com/', connected: false, reason: 'No authorized listing integration configured.' },
   { id: 'adopt-a-pet', name: 'Adopt a Pet', url: 'https://www.adoptapet.com/', connected: false, reason: 'No authorized listing integration configured.' },
 ];

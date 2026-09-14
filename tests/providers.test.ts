@@ -47,7 +47,8 @@ test('Lost Our Home retains available foster status without inventing a city or 
 });
 test('URLs reject executable schemes; unconnected sources never expose fake collectors', () => {
   assert.equal(safeUrl('javascript:alert(1)'), null); assert.equal(safeUrl('https://user:pass@example.com'), null);
-  assert.equal(registry.filter(p => p.connected).length, 5);
+  assert.ok(registry.some(p => p.connected));
+  for (const source of registry.filter(p => p.connected)) assert.equal(typeof source.collect, 'function');
   for (const source of registry.filter(p => !p.connected)) { assert.ok(source.reason); assert.equal(source.collect, undefined); }
 });
 test('transport rejects unknown origin and rechecks redirects before fetching destinations', async () => {
@@ -97,4 +98,21 @@ test('Petango retains its hidden individual location, including foster unknowns'
 test('SOL adoption text fragment locates the individual name with safe encoding', () => {
   const [cat] = parseSavingOneLife(sol('Tortoiseshell', 123).replace('>Peach<', '>Peach &amp; Cream-Soda<'));
   assert.equal(cat.adoptionUrl, 'https://www.savingonelife.org/adopt/available/#:~:text=Peach%20%26%20Cream%2DSoda');
+});
+
+
+test('existing individual listing links preserve their source-specific identity', () => {
+  const [ffl] = parseFriendsForLife(asm([asmCat]));
+  const fflUrl = new URL(ffl.adoptionUrl);
+  assert.equal(fflUrl.origin, 'https://us06d.sheltermanager.com');
+  assert.equal(fflUrl.searchParams.get('method'), 'animal_view');
+  assert.equal(fflUrl.searchParams.get('animalid'), ffl.animalId);
+  assert.equal(fflUrl.searchParams.get('account'), 'zp1008');
+  for (const [id, shelter] of [['halo', 'HALO Animal Rescue'], ['fearless-kitty', 'Fearless Kitty Rescue']]) {
+    const [cat] = parsePetango(petango(), id, shelter);
+    const url = new URL(cat.adoptionUrl);
+    assert.equal(url.origin, 'https://ws.petango.com');
+    assert.equal(url.pathname, '/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx');
+    assert.equal(url.searchParams.get('id'), cat.animalId);
+  }
 });

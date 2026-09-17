@@ -1,5 +1,5 @@
 const ALLOWED_ORIGINS = new Set([
-  'https://apps.pets.maricopa.gov', 'https://toolkit.rescuegroups.org', 'https://www.savingonelife.org', 'https://ws.petango.com',
+  'https://aawl.org', 'https://apps.pets.maricopa.gov', 'https://toolkit.rescuegroups.org', 'https://www.savingonelife.org', 'https://ws.petango.com',
   'https://service.sheltermanager.com', 'https://us06d.sheltermanager.com', 'https://www.lostourhome.org',
 ]);
 export const MAX_BYTES = 5 * 1024 * 1024;

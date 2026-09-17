@@ -1,3 +1,4 @@
+import {collectAawl,AAWL_URL} from './aawl';
 import {collectMcacc,MCACC_URL} from './phoenix';
 import {collectKneading,KNEADING_URL} from './kneading';
 import type { Listing } from '../../src/types.js';
@@ -15,7 +16,7 @@ export const registry: Provider[] = [
   { id: 'fearless-kitty', name: 'Fearless Kitty Rescue', url: 'https://fearlesskittyrescue.org/adoptable/', connected: true, collect: async () => parsePetango(await fetchPublicText(fearlessFeed), 'fearless-kitty', 'Fearless Kitty Rescue') },
   { id: 'ahs', name: 'Arizona Humane Society', url: 'https://www.azhumane.org/adopt/', connected: false, reason: 'The shelter website blocks automated reads; browse its listings directly.' },
   { id: 'mcacc', name: 'Maricopa County Animal Care & Control', url: MCACC_URL, connected: true, collect: () => collectMcacc() },
-  { id: 'aawl', name: 'Arizona Animal Welfare League', url: 'https://aawl.org/', connected: false, reason: 'The shelter website blocks automated reads; browse its listings directly.' },
+  { id: 'aawl', name: 'Arizona Animal Welfare League', url: AAWL_URL, connected: true, collect: () => collectAawl() },
   { id: 'desert-paws', name: 'Desert Paws Rescue', url: 'https://desertpawsrescue.org/adopt', connected: false, reason: 'Its embedded Petfinder feed currently denies automated access.' },
   { id: 'kneading-kitty', name: 'Kneading Kitty’s Rescue', url: KNEADING_URL, connected: true, collect: collectKneading },
   { id: 'petfinder', name: 'Petfinder', url: 'https://www.petfinder.com/', connected: false, reason: 'No authorized listing integration configured.' },

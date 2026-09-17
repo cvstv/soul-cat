@@ -1,0 +1,9 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {parseAawlPage,parseAawlDetail,collectAawl} from '../server/providers/aawl';
+const card='<div class="c-card-pet" data-petango-id="123"><a class="c-card-pet__link" href="https://aawl.org/adopt/123"><h3 class="c-card-pet__name">Mia</h3></a></div>';
+const page=JSON.stringify({items:[card],total:1,has_more:false,page:1,per_page:12});
+const detail='<link rel="canonical" href="https://aawl.org/adopt/123/"><section data-pet-detail data-petango-id="123"><div class="c-pet-detail__stat--age"><span class="c-pet-detail__stat-label">4 months</span></div><div class="c-pet-detail__stat--sex"><span class="c-pet-detail__stat-label">Female</span></div><div class="c-pet-detail__bio">Friendly cat.</div></section>';
+test('AAWL preserves individual identity and exact age',()=>{const p=parseAawlPage(page,1);const cat=parseAawlDetail(detail,p.cats[0]);assert.equal(cat.adoptionUrl,'https://aawl.org/adopt/123/');assert.equal(cat.ageMonths,4);assert.equal(cat.sex,'Female');assert.equal(cat.city,'Unknown');assert.throws(()=>parseAawlDetail(detail.replaceAll('123','124'),p.cats[0]));});
+test('AAWL rejects malformed responses and accepts explicit zero',()=>{assert.throws(()=>parseAawlPage('<html>challenge</html>',1));assert.throws(()=>parseAawlPage(page,2));assert.equal(parseAawlPage(JSON.stringify({items:[],total:0,has_more:false,page:1,per_page:12}),1).cats.length,0);});
+test('AAWL collector refuses incomplete inventory and duplicate pages',async()=>{const cats=await collectAawl(async u=>u.includes('wp-json')?page:detail);assert.equal(cats.length,1);await assert.rejects(collectAawl(async()=>page.replace('"total":1','"total":2')));await assert.rejects(collectAawl(async u=>JSON.stringify({items:[card],total:2,has_more:u.includes('page=1&'),page:u.includes('page=1&')?1:2,per_page:12})));});

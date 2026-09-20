@@ -42,7 +42,7 @@ Arizona Humane Society currently challenges automated reads. AAWL is connected t
 
 Only explicit shelter text confirms a coat. There is no automated visual coat classifier. Unknown fields remain unknown. Foster locations are not inferred from rescue headquarters. Shelter photos are linked externally and remain the property of their respective owners; the code license does not license their content. A source may cache its listings: our timestamp means when we read it, not a guarantee that the cat is still available.
 
-Failed sources retain previous inventory. Listings absent from a successful full feed become `not_listed`, never automatically `adopted`. Exact source/animal IDs deduplicate repeat scans. Listings across different shelters are not merged by name because that can combine unrelated cats.
+Failed sources retain previous inventory. Listings absent from a successful full feed become `not_listed`, never automatically `adopted`. Exact source/animal IDs deduplicate repeat scans. For Saving One Life listings without a published ID, a unique name and published birth date form an internal identity hint; the UI still says the animal ID is unpublished. An unambiguous identity hint preserves history if a photo and ID appear later. Listings across different shelters are not merged by name because that can combine unrelated cats.
 
 ## Storage and security
 

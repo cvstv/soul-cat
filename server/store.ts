@@ -14,12 +14,17 @@ export async function saveSource(db:Client,source:Source,listings:Listing[]|null
  const tx=await db.transaction('write');let added=0;
  try{
   if(listings!==null){
-   const old=await tx.execute({sql:'SELECT key,first_seen FROM cats WHERE source_id=?',args:[source.id]});
+   const old=await tx.execute({sql:'SELECT key,first_seen,body FROM cats WHERE source_id=?',args:[source.id]});
    const seen=new Map(old.rows.map(r=>[String(r.key),String(r.first_seen)]));
    await tx.execute({sql:"UPDATE cats SET availability='not_listed' WHERE source_id=?",args:[source.id]});
    const writes:InStatement[]=[];
    for(const listing of listings){
-    const key=source.id+':'+listing.animalId;
+    if(!listing.animalId&&!listing.identityHint)throw new Error('Missing listing identity');
+    let key=source.id+':'+(listing.animalId||'unpublished:'+listing.identityHint);
+    if(listing.identityHint){
+     const matches=old.rows.filter(r=>{const prior=JSON.parse(String(r.body)) as Listing;return prior.identityHint===listing.identityHint&&(!prior.animalId||!listing.animalId||prior.animalId===listing.animalId);});
+     if(matches.length===1&&!seen.has(key)&&listings.filter(c=>c.identityHint===listing.identityHint).length===1)key=String(matches[0].key);
+    }
     if(!seen.has(key))added++;
     writes.push({sql:`INSERT INTO cats(key,source_id,body,first_seen,last_seen,availability) VALUES(?,?,?,?,?,'listed') ON CONFLICT(key) DO UPDATE SET body=excluded.body,last_seen=excluded.last_seen,availability='listed'`,args:[key,source.id,JSON.stringify(listing),seen.get(key)||now,now]});
    }

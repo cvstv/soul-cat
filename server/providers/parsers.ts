@@ -47,7 +47,7 @@ function finish(item: Listing): Listing {
 function requireResults(items: Listing[], source: string): Listing[] {
   if (!items.length) throw new Error(`${source}: no recognizable cat records; zero inventory not verified`);
   const seen = new Set<string>();
-  return items.filter(item => { if (seen.has(item.animalId)) return false; seen.add(item.animalId); return true; });
+  return items.filter(item => { const identity = item.animalId || item.identityHint!; if (seen.has(identity)) return false; seen.add(identity); return true; });
 }
 export function parseSavingOneLife(html: string, now = new Date()): Listing[] {
   const $ = load(html); const cats: Listing[] = [];
@@ -55,16 +55,25 @@ export function parseSavingOneLife(html: string, now = new Date()): Listing[] {
     const node = $(element); const photo = safeUrl(node.find('.picture-item__glyph img').attr('src'));
     const id = photo?.match(/\/animals\/\d+\/(\d+)\//)?.[1] || '';
     const name = clean(node.find('.picture-item__title').text());
+    const description = plain(node.find('.pf-description').html());
+    const dob = description.match(/(?:date of birth|d\.?o\.?b\.?)\s*:?\s*(\d{1,2}\/\d{1,2}\/\d{4})/i)?.[1];
+    const identityHint = name && dob ? JSON.stringify([name.toLowerCase(),dob]) : undefined;
+    if (!id && !identityHint) throw new Error('Source record missing animal identity; scan rejected');
     // Native browser text fragments locate this cat in the shelter's inline-card inventory.
-    const item = baseListing('saving-one-life', 'Saving One Life', id, name, `${SOL_URL}#:~:text=${encodeURIComponent(name).replace(/-/g, '%2D')}`);
+    const item = baseListing('saving-one-life', 'Saving One Life', id || identityHint!, name, `${SOL_URL}#:~:text=${encodeURIComponent(name).replace(/-/g, '%2D')}`);
+    item.animalId = id;
+    item.identityHint = identityHint;
     item.photo = photo;
     item.breed = clean(node.find('.item__breed-tag').text()) || 'Unknown';
     item.coat = item.breed.match(/\b(?:Tortoiseshell|Tortie|Torbie|Calico|Tuxedo|Tabby)\b/i)?.[0] || 'Unknown';
     item.sex = clean(node.find('.my-pet-attributes span').eq(2).text()) || 'Unknown';
-    item.description = plain(node.find('.pf-description').html());
+    item.description = description;
     item.ageMonths = ageFromDob(item.description, now);
     cats.push(finish(item));
   });
+  for (const cat of cats.filter(c => !c.animalId)) {
+    if (cats.filter(c => c.identityHint === cat.identityHint).length !== 1) throw new Error('SOL ambiguous identity without published ID');
+  }
   return requireResults(cats, 'Saving One Life');
 }
 export function parsePetango(html: string, sourceId = 'halo', shelter = 'HALO Animal Rescue'): Listing[] {

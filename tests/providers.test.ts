@@ -116,3 +116,8 @@ test('existing individual listing links preserve their source-specific identity'
     assert.equal(url.searchParams.get('id'), cat.animalId);
   }
 });
+test('SOL missing photo keeps the cat without inventing a public animal ID',()=>{
+ const html=sol('Domestic Long Hair',123).replace('https://cdn.rescuegroups.org/6810/pictures/animals/22770/123/photo.jpg','http://www.savingonelife.org/nophoto.png');
+ const [cat]=parseSavingOneLife(html);assert.equal(cat.animalId,'');assert.equal(cat.photo,null);assert.ok(cat.identityHint);assert.equal(cat.identityHint,parseSavingOneLife(sol('Domestic Long Hair',123))[0].identityHint);
+ assert.throws(()=>parseSavingOneLife(html+html),/ambiguous/);
+});

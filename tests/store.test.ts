@@ -22,3 +22,11 @@ test('schedule is 8am, 1pm, 5pm Phoenix including UTC day rollover',()=>{
  assert.equal(nextCheck(new Date('2026-09-12T20:00:00Z')),'2026-09-13T00:00:00.000Z');
  assert.equal(nextCheck(new Date('2026-09-13T00:00:00Z')),'2026-09-13T15:00:00.000Z');
 });
+test('a listing gaining or losing its published ID preserves identity and first seen',async()=>{
+ const db=createClient({url:'file::memory:'});await migrate(db);
+ const pending={...cat,animalId:'',identityHint:'cat-born-2026-04-10'};
+ await saveSource(db,{...source},[pending],'2026-09-10T00:00:00Z');
+ assert.equal(await saveSource(db,{...source},[{...pending,animalId:'123'}],'2026-09-11T00:00:00Z'),0);
+ assert.equal(await saveSource(db,{...source},[pending],'2026-09-12T00:00:00Z'),0);
+ const state=await readStore(db);assert.equal(state.cats.length,1);assert.equal(state.cats[0].firstSeen,'2026-09-10T00:00:00Z');assert.equal(state.cats[0].availability,'listed');db.close();
+});

@@ -1,3 +1,5 @@
+import {collectAhs} from './ahs';
+import {collectAdoptapet,ADOPTAPET_URL} from './adoptapet';
 import {collectAawl,AAWL_URL} from './aawl';
 import {collectMcacc,MCACC_URL} from './phoenix';
 import {collectKneading,KNEADING_URL} from './kneading';
@@ -14,11 +16,11 @@ export const registry: Provider[] = [
   { id: 'friends-for-life', name: 'Friends for Life Animal Rescue', url: FFL_URL, connected: true, collect: async () => parseFriendsForLife(await fetchPublicText('https://service.sheltermanager.com/asmservice?method=animal_view_adoptable_js&account=zp1008')) },
   { id: 'lost-our-home', name: 'Lost Our Home Pet Rescue', url: LOST_URL, connected: true, collect: async () => parseLostOurHome(await fetchPublicText(LOST_URL)) },
   { id: 'fearless-kitty', name: 'Fearless Kitty Rescue', url: 'https://fearlesskittyrescue.org/adoptable/', connected: true, collect: async () => parsePetango(await fetchPublicText(fearlessFeed), 'fearless-kitty', 'Fearless Kitty Rescue') },
-  { id: 'ahs', name: 'Arizona Humane Society', url: 'https://www.azhumane.org/adopt/', connected: false, reason: 'The shelter website blocks automated reads; browse its listings directly.' },
+  { id: 'ahs', name: 'Arizona Humane Society via Adopt a Pet', url: 'https://www.azhumane.org/adopt/', connected: true, collect: () => collectAhs() },
   { id: 'mcacc', name: 'Maricopa County Animal Care & Control', url: MCACC_URL, connected: true, collect: () => collectMcacc() },
   { id: 'aawl', name: 'Arizona Animal Welfare League', url: AAWL_URL, connected: true, collect: () => collectAawl() },
-  { id: 'desert-paws', name: 'Desert Paws Rescue', url: 'https://desertpawsrescue.org/adopt', connected: false, reason: 'Its embedded Petfinder feed currently denies automated access.' },
+  { id: 'desert-paws', name: 'Desert Paws Rescue', url: 'https://desertpawsrescue.org/adopt', connected: false, reason: 'Its Petfinder feed returns HTTP 403. Petfinder server access for organization AZ301 is needed.' },
   { id: 'kneading-kitty', name: 'Kneading Kitty’s Rescue', url: KNEADING_URL, connected: true, collect: collectKneading },
-  { id: 'petfinder', name: 'Petfinder', url: 'https://www.petfinder.com/', connected: false, reason: 'No authorized listing integration configured.' },
-  { id: 'adopt-a-pet', name: 'Adopt a Pet', url: 'https://www.adoptapet.com/', connected: false, reason: 'No authorized listing integration configured.' },
+  { id: 'petfinder', name: 'Petfinder', url: 'https://www.petfinder.com/', connected: false, reason: 'Current GraphQL server access and permission for combined-source display must be confirmed with Petfinder.' },
+  { id: 'adopt-a-pet', name: 'Adopt a Pet · Phoenix 50 miles', url: ADOPTAPET_URL, connected: true, collect: collectAdoptapet },
 ];

@@ -22,7 +22,9 @@ The background worker is available at `/.netlify/functions/scan-worker`. It requ
 - `npm test`: full suite, including overlapping scope reconciliation, repeated migrations, worker claim/fencing/cooldown, exact listing identity, malformed records and city fallback.
 - `npm run build`: TypeScript and Vite production build.
 - Bundled both new/scheduled Netlify function entrypoints with the project's esbuild dependency.
-- Parsed the saved public Shelterluv samples for both configured organizations without modifying the production database.
+- Parsed the saved public Shelterluv samples for both configured organizations without modifying the production database. A direct collector read on September 28 at about 03:17 UTC returned 148 Hermitage cats and 66 Homeward Bound cats, with matching unique IDs and exact profile URLs in each response. The count change from the study's 70 Homeward Bound cats shows why results must carry check times.
+
+The live check also found that one of Shelterluv's advertised DNS targets presented a certificate for another host, while another target passed TLS verification. The collector now retries transient network failures up to twice with TLS verification still enabled. This can improve intermittent reads; it cannot repair the provider's certificate, so a failed check retains prior listings and shows source failure.
 
 ## Next implementation gates
 

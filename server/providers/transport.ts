@@ -10,7 +10,12 @@ export async function fetchPublicText(input: string): Promise<string> {
     let url = new URL(input);
     for (let redirects = 0; redirects <= 3; redirects++) {
       if (!ALLOWED_ORIGINS.has(url.origin) || url.username || url.password) throw new Error('Source URL origin not allowed');
-      const response = await fetch(url, { signal: controller.signal, redirect: 'manual', headers: { Accept: 'application/json,text/html,application/javascript,text/javascript', 'User-Agent': 'SoulCat/1.0 public adoption inventory' } });
+      let response:Response|undefined;
+      for(let attempt=0;attempt<3;attempt++){
+        try{response=await fetch(url, { signal: controller.signal, redirect: 'manual', headers: { Accept: 'application/json,text/html,application/javascript,text/javascript', 'User-Agent': 'SoulCat/1.0 public adoption inventory' } });break;}
+        catch(error){if(!(error instanceof TypeError)||attempt===2||controller.signal.aborted)throw error;}
+      }
+      if(!response)throw new Error('Source network request failed');
       if ([301, 302, 303, 307, 308].includes(response.status)) {
         await response.body?.cancel();
         const next = response.headers.get('location'); if (!next) throw new Error('Source redirect missing location');

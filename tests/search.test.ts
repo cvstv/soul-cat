@@ -14,6 +14,10 @@ test('general keyword, breed, source, sex and coat filters compose, including to
  assert.equal(filterCats(cats,{...defaults,q:'sunny tortie',sex:'female',city:'Phoenix',source:'halo',breed:'short'},new Set())[0]?.name,'Mira');
  assert.equal(filterCats(cats,{...defaults,coat:'tabby'},new Set())[0]?.name,'Rex');
 });
+test('city search includes a rescue-area listing with unknown placement but excludes an explicit different city',()=>{
+ const cats=[cat('unconfirmed',3,{city:'Unknown',sourceCity:'Tucson',location:'Adoptions Lobby'}),cat('elsewhere',3,{city:'Mesa',sourceCity:'Tucson',location:'Mesa'}),cat('local',3,{city:'Tucson'})];
+ assert.deepEqual(filterCats(cats,{...defaults,city:'Tucson'},new Set()).map(c=>c.key).sort(),['local','unconfirmed']);
+});
 test('saved filters do not override availability; sorting places unknown ages last',()=>{
  const cats=[cat('a',null),cat('b',5),cat('c',10,{availability:'not_listed'})];
  assert.deepEqual(filterCats(cats,{...defaults,sort:'oldest'},new Set()).map(c=>c.key),['b','a']);

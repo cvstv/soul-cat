@@ -1,6 +1,7 @@
 import {database,migrate} from './db';
-import {beginScan,saveSource,readStore,nextCheck} from './store';
+import {beginScan,releaseScan,saveSource,readStore,nextCheck} from './store';
 import {registry} from './providers/index';
+import {expireStaleScanJobs,getActiveScan,getLatestScan} from './jobs';
 import type {Inventory,Source} from '../src/types';
 export async function refresh(trigger='manual'){
  const db=database();await migrate(db);
@@ -20,11 +21,13 @@ export async function refresh(trigger='manual'){
   run.finishedAt=new Date().toISOString();
   await db.execute({sql:'UPDATE scans SET body=? WHERE id=?',args:[JSON.stringify(run),run.id]});
   await db.execute("DELETE FROM scans WHERE id NOT IN (SELECT id FROM scans ORDER BY started_at DESC LIMIT 100)");
+  await releaseScan(db,run);
  }
  return run;
 }
 export async function inventory():Promise<Inventory>{
- const db=database();await migrate(db);const data=await readStore(db);
+ const db=database();await migrate(db);await expireStaleScanJobs(db);const data=await readStore(db);
  const sources:Source[]=registry.map(s=>data.sources.find(o=>o.id===s.id)||{id:s.id,name:s.name,url:s.url,connected:s.connected,status:s.connected?'not_checked':'not_connected',count:0,lastSuccess:null,message:s.reason||'Not checked yet'});
- return {...data,sources,nextCheck:nextCheck(),lastSuccess:data.runs.find(r=>r.status==='success')?.finishedAt||null};
+ const [activeJob,latestJob]=await Promise.all([getActiveScan(db),getLatestScan(db)]);
+ return {...data,sources,activeJob,latestJob,nextCheck:nextCheck(),lastSuccess:data.runs.find(r=>r.status==='success')?.finishedAt||null};
 }

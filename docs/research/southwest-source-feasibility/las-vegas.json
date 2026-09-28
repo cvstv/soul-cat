@@ -1,0 +1,417 @@
+{
+  "sources": [
+    {
+      "id": "taf",
+      "region": "Las Vegas",
+      "name": "The Animal Foundation",
+      "official_url": "https://animalfoundation.com/what-we-do/adoption/adopt-a-pet/",
+      "platform": "Custom WordPress elevation directory",
+      "status": "partial_sample_rate_limited",
+      "count": 260,
+      "count_basis": "cat-filter response reported total; only 12 cards fetched",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 10,
+      "sample_basis": "seven detail identities retrieved; three HTTP 429",
+      "reuse": "custom adapter; generic pagination logic reusable",
+      "location_limit": "Found address differs from placement; stray intake/hold requires interpretation",
+      "activation_gate": "Validate eligibility, paginate under host pacing; stop/retry later on 429",
+      "evidence": [
+        "las-vegas.json"
+      ],
+      "notes": "Validate eligibility, paginate under host pacing; stop/retry later on 429"
+    },
+    {
+      "id": "homeward",
+      "region": "Las Vegas",
+      "name": "Homeward Bound Cat Adoptions",
+      "official_url": "https://www.homewardboundcats.org/adopt/",
+      "platform": "Shelterluv public widget",
+      "status": "public_sample_verified",
+      "count": 70,
+      "count_basis": "unique Cat records in returned array",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 10,
+      "sample_basis": "ten published details with structured animal records",
+      "reuse": "shared new adapter with Hermitage",
+      "location_limit": "Stand Alone, Black is a placement label, not a city",
+      "activation_gate": "Validate public interface stability, source requirements and completeness before activation",
+      "evidence": [
+        "las-vegas.json"
+      ],
+      "notes": "Validate public interface stability, source requirements and completeness before activation"
+    },
+    {
+      "id": "henderson",
+      "region": "Las Vegas",
+      "name": "Henderson Animal Protection Services",
+      "official_url": "https://www.cityofhenderson.com/government/departments/community-development-and-services/animal-protection-services/pets-available-for-adoption",
+      "platform": "Unresolved",
+      "status": "access_limited",
+      "count": null,
+      "count_basis": "unknown",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 0,
+      "sample_basis": "official page direct/web access failed; search indexed official page",
+      "reuse": "unproven",
+      "location_limit": "Facility address cannot establish every cat location",
+      "activation_gate": "Inspect public page interactively or obtain supported feed information",
+      "evidence": [
+        "las-vegas.json"
+      ],
+      "notes": "Inspect public page interactively or obtain supported feed information"
+    },
+    {
+      "id": "nspca",
+      "region": "Las Vegas",
+      "name": "Nevada SPCA",
+      "official_url": "https://nevadaspca.org/adopt/adoptable-pets/",
+      "platform": "WordPress public profiles; Shelterluv images",
+      "status": "cached_profiles_only",
+      "count": null,
+      "count_basis": "51 all-species cached results not a cat count",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 10,
+      "sample_basis": "four cached profiles accessible, six unsuccessful in web tool",
+      "reuse": "custom wrapper or public widget still to identify",
+      "location_limit": "Office Foster does not specify distance",
+      "activation_gate": "Get live inventory enumeration; do not invent links from names",
+      "evidence": [
+        "las-vegas.json"
+      ],
+      "notes": "Get live inventory enumeration; do not invent links from names"
+    },
+    {
+      "id": "hav",
+      "region": "Las Vegas",
+      "name": "Hearts Alive Village",
+      "official_url": "https://heartsalivevillage.org/adopt/adoptable-cats/",
+      "platform": "Unresolved embedded inventory",
+      "status": "access_limited",
+      "count": null,
+      "count_basis": "unknown",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 0,
+      "sample_basis": "direct HTTP 403; official indexed page confirms adoption program, no inventory payload",
+      "reuse": "unproven",
+      "location_limit": "Multiple adoption locations and foster placements",
+      "activation_gate": "Identify public feed; org confirmation is not connector completion",
+      "evidence": [
+        "las-vegas.json"
+      ],
+      "notes": "Identify public feed; org confirmation is not connector completion"
+    }
+  ],
+  "samples": {
+    "homeward": [
+      {
+        "uniqueId": "HBCA-A-82824",
+        "name": "Agnes",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Grey",
+        "secondary_color": "Calico",
+        "sex": "Female",
+        "birthday": "1488873600",
+        "location": "Stand Alone, Black",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-82824"
+      },
+      {
+        "uniqueId": "HBCA-A-83801",
+        "name": "Snow",
+        "species": "Cat",
+        "breed": "Domestic Medium Hair",
+        "primary_color": "White",
+        "secondary_color": "Brown",
+        "sex": "Female",
+        "birthday": "1604649600",
+        "location": "Cat Room 2",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-83801"
+      },
+      {
+        "uniqueId": "HBCA-A-84139",
+        "name": "Elfie",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Grey",
+        "secondary_color": "Black",
+        "sex": "Female",
+        "birthday": "1725475844",
+        "location": "Cat Room 5",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84139"
+      },
+      {
+        "uniqueId": "HBCA-A-84831",
+        "name": "Simon",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Black",
+        "secondary_color": "White",
+        "sex": "Male",
+        "birthday": "1652466247",
+        "location": "Cat Room 1",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84831"
+      },
+      {
+        "uniqueId": "HBCA-A-84896",
+        "name": "Marshmallow",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Grey",
+        "secondary_color": null,
+        "sex": "Unknown",
+        "birthday": "1776841200",
+        "location": "Foster Home",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84896"
+      },
+      {
+        "uniqueId": "HBCA-A-84897",
+        "name": "Muffin",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Grey",
+        "secondary_color": null,
+        "sex": "Unknown",
+        "birthday": "1776841200",
+        "location": "Foster Home",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84897"
+      },
+      {
+        "uniqueId": "HBCA-A-84898",
+        "name": "Cashmere",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Grey",
+        "secondary_color": null,
+        "sex": "Unknown",
+        "birthday": "1776841200",
+        "location": "Foster Home",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84898"
+      },
+      {
+        "uniqueId": "HBCA-A-84900",
+        "name": "Angel",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Cream",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1684876311",
+        "location": "Cat Room 2",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84900"
+      },
+      {
+        "uniqueId": "HBCA-A-84966",
+        "name": "Katniss",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Grey",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1717484400",
+        "location": "Cat Room 3",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-84966"
+      },
+      {
+        "uniqueId": "HBCA-A-85059",
+        "name": "Luna",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Brown",
+        "secondary_color": "White",
+        "sex": "Female",
+        "birthday": "1622444400",
+        "location": "Cat Room 1",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HBCA-A-85059"
+      }
+    ]
+  },
+  "detail_checks": [
+    {
+      "source": "homeward",
+      "id": "HBCA-A-82824",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-82824",
+      "observed_at": "2026-09-27T07:53:19.544983+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-83801",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-83801",
+      "observed_at": "2026-09-27T07:53:19.501441+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84139",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84139",
+      "observed_at": "2026-09-27T07:53:19.689299+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84831",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84831",
+      "observed_at": "2026-09-27T07:53:19.787886+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84896",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84896",
+      "observed_at": "2026-09-27T07:53:19.828854+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84897",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84897",
+      "observed_at": "2026-09-27T07:53:19.966270+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84898",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84898",
+      "observed_at": "2026-09-27T07:53:20.078705+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84900",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84900",
+      "observed_at": "2026-09-27T07:53:20.078995+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-84966",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-84966",
+      "observed_at": "2026-09-27T07:53:20.256278+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "homeward",
+      "id": "HBCA-A-85059",
+      "url": "https://www.shelterluv.com/embed/animal/HBCA-A-85059",
+      "observed_at": "2026-09-27T07:53:20.365486+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439677",
+      "url": "https://animalfoundation.com/adoption/a1439677/",
+      "observed_at": "2026-09-27T07:53:20.265688+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439674",
+      "url": "https://animalfoundation.com/adoption/a1439674/",
+      "observed_at": "2026-09-27T07:53:20.404923+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439675",
+      "url": "https://animalfoundation.com/adoption/a1439675/",
+      "observed_at": "2026-09-27T07:53:20.412238+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439673",
+      "url": "https://animalfoundation.com/adoption/a1439673/",
+      "observed_at": "2026-09-27T07:53:20.519506+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439672",
+      "url": "https://animalfoundation.com/adoption/a1439672/",
+      "observed_at": "2026-09-27T07:53:20.551085+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439669",
+      "url": "https://animalfoundation.com/adoption/a1439669/",
+      "observed_at": "2026-09-27T07:53:20.562259+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439662",
+      "url": "https://animalfoundation.com/adoption/a1439662/",
+      "observed_at": "2026-09-27T07:53:22.646456+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "taf",
+      "id": "a1439663",
+      "url": "https://animalfoundation.com/adoption/a1439663/",
+      "observed_at": "2026-09-27T07:53:20.636866+00:00",
+      "verified": false,
+      "error": "curl: (56) The requested URL returned error: 429\n"
+    },
+    {
+      "source": "taf",
+      "id": "a1439664",
+      "url": "https://animalfoundation.com/adoption/a1439664/",
+      "observed_at": "2026-09-27T07:53:20.636691+00:00",
+      "verified": false,
+      "error": "curl: (56) The requested URL returned error: 429\n"
+    },
+    {
+      "source": "taf",
+      "id": "a1439665",
+      "url": "https://animalfoundation.com/adoption/a1439665/",
+      "observed_at": "2026-09-27T07:53:20.720587+00:00",
+      "verified": false,
+      "error": "curl: (56) The requested URL returned error: 429\n"
+    }
+  ],
+  "cached_nevada_spca": {
+    "successful": [
+      "https://nevadaspca.org/animals/catniss-2/",
+      "https://nevadaspca.org/animals/kitty-kitty/",
+      "https://nevadaspca.org/animals/oreo-4/",
+      "https://nevadaspca.org/animals/pumpkin-2/"
+    ],
+    "failed": [
+      "bertha",
+      "brown-sugar",
+      "gracie",
+      "jake",
+      "juniper",
+      "miso"
+    ],
+    "note": "Cached web retrieval, not fresh HTTP verification. Slugs differ from display names."
+  }
+}

@@ -6,6 +6,7 @@ import {collectKneading,KNEADING_URL} from './kneading';
 import type { Listing } from '../../src/types.js';
 import { FFL_URL, LOST_URL, SOL_URL, parseFriendsForLife, parseLostOurHome, parsePetango, parseSavingOneLife } from './parsers.js';
 import { fetchPublicText } from './transport.js';
+import { collectShelterluv } from './shelterluv.js';
 export interface Provider { id: string; name: string; url: string; connected: boolean; reason?: string; collect?: () => Promise<Listing[]>; }
 // Petango's authkey is the public embed identifier published on the shelter's adoption page, not a private credential.
 const haloFeed = 'https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimals2.aspx?species=Cat&gender=A&agegroup=All&location=&site=&onhold=A&orderby=ID&colnum=3&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&recAmount=&detailsInPopup=Yes&featuredPet=Include&stageID=';
@@ -23,4 +24,6 @@ export const registry: Provider[] = [
   { id: 'kneading-kitty', name: 'Kneading Kitty’s Rescue', url: KNEADING_URL, connected: true, collect: collectKneading },
   { id: 'petfinder', name: 'Petfinder', url: 'https://www.petfinder.com/', connected: false, reason: 'Current GraphQL server access and permission for combined-source display must be confirmed with Petfinder.' },
   { id: 'adopt-a-pet', name: 'Adopt a Pet · Phoenix 50 miles', url: ADOPTAPET_URL, connected: true, collect: collectAdoptapet },
+  { id: 'hermitage', name: 'Hermitage No-Kill Cat Shelter', url: 'https://www.hermitagecatshelter.org/adopt/', connected: true, collect: () => collectShelterluv({id:'hermitage',name:'Hermitage No-Kill Cat Shelter',url:'https://www.hermitagecatshelter.org/adopt/',shelterId:38723,prefix:'HERM',city:'Tucson'}) },
+  { id: 'homeward', name: 'Homeward Bound Cat Adoptions', url: 'https://www.homewardboundcats.org/adopt/', connected: true, collect: () => collectShelterluv({id:'homeward',name:'Homeward Bound Cat Adoptions',url:'https://www.homewardboundcats.org/adopt/',shelterId:5575,prefix:'HBCA',city:'Las Vegas'}) },
 ];

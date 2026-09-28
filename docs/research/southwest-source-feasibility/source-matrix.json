@@ -1,0 +1,454 @@
+[
+  {
+    "id": "saving-one-life",
+    "region": "Phoenix",
+    "name": "Saving One Life",
+    "official_url": "https://www.savingonelife.org/adopt/available/",
+    "platform": "Custom HTML / RescueGroups photos",
+    "status": "existing_checked",
+    "count": 104,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:00:59.153Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "existing source-specific adapter",
+    "location_limit": "104 listed links are text fragments, not standalone profiles; city unknown.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "104 listed links are text fragments, not standalone profiles; city unknown."
+  },
+  {
+    "id": "halo",
+    "region": "Phoenix",
+    "name": "HALO Animal Rescue",
+    "official_url": "https://halorescue.org/cat-adoption/",
+    "platform": "Petango public widget",
+    "status": "existing_checked",
+    "count": 34,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:00:56.837Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "shared existing adapter",
+    "location_limit": "Shares parser with Fearless Kitty; org-specific widget identifier.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Shares parser with Fearless Kitty; org-specific widget identifier."
+  },
+  {
+    "id": "friends-for-life",
+    "region": "Phoenix",
+    "name": "Friends for Life Animal Rescue",
+    "official_url": "https://azfriends.org/adopt/adopt-a-cat/",
+    "platform": "Animal Shelter Manager public JS",
+    "status": "existing_checked",
+    "count": 10,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:00:59.359Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "existing source-specific adapter",
+    "location_limit": "Parse structured JS as data; do not execute remote script.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Parse structured JS as data; do not execute remote script."
+  },
+  {
+    "id": "lost-our-home",
+    "region": "Phoenix",
+    "name": "Lost Our Home Pet Rescue",
+    "official_url": "https://www.lostourhome.org/adopt-a-pet/adopt-a-cat",
+    "platform": "Custom HTML / Shelterluv photos",
+    "status": "existing_checked",
+    "count": 24,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:00:57.158Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "existing source-specific adapter",
+    "location_limit": "Shelterluv-hosted photos do not prove generic feed access.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Shelterluv-hosted photos do not prove generic feed access."
+  },
+  {
+    "id": "fearless-kitty",
+    "region": "Phoenix",
+    "name": "Fearless Kitty Rescue",
+    "official_url": "https://fearlesskittyrescue.org/adoptable/",
+    "platform": "Petango public widget",
+    "status": "existing_checked",
+    "count": 63,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:00:57.314Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "shared existing adapter",
+    "location_limit": "Same parser as HALO; current city unknown.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Same parser as HALO; current city unknown."
+  },
+  {
+    "id": "ahs",
+    "region": "Phoenix",
+    "name": "Arizona Humane Society via Adopt a Pet",
+    "official_url": "https://www.azhumane.org/adopt/",
+    "platform": "Adopt a Pet organization listings",
+    "status": "existing_checked",
+    "count": 150,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:01:04.180Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "shared existing adapter",
+    "location_limit": "Three campus selectors; shares Adopt a Pet access dependency.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Three campus selectors; shares Adopt a Pet access dependency."
+  },
+  {
+    "id": "mcacc",
+    "region": "Phoenix",
+    "name": "Maricopa County Animal Care & Control",
+    "official_url": "https://apps.pets.maricopa.gov/adoptPets/",
+    "platform": "Custom county HTML",
+    "status": "existing_checked",
+    "count": 11,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:01:01.273Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "existing source-specific adapter",
+    "location_limit": "Raw breed contains colors/patterns/hair length; city unknown in stored records.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Raw breed contains colors/patterns/hair length; city unknown in stored records."
+  },
+  {
+    "id": "aawl",
+    "region": "Phoenix",
+    "name": "Arizona Animal Welfare League",
+    "official_url": "https://aawl.org/adopt/cats/",
+    "platform": "Custom WordPress feed/details",
+    "status": "existing_checked",
+    "count": 42,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:01:07.100Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "existing source-specific adapter",
+    "location_limit": "Enumeration and detail are separate; current implementation fetches every detail.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Enumeration and detail are separate; current implementation fetches every detail."
+  },
+  {
+    "id": "desert-paws",
+    "region": "Phoenix",
+    "name": "Desert Paws Rescue",
+    "official_url": "https://desertpawsrescue.org/adopt",
+    "platform": "Petfinder dependency",
+    "status": "existing_not_connected",
+    "count": null,
+    "count_basis": "unknown; not connected",
+    "observed_at": null,
+    "sample_count": 0,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "unproven",
+    "location_limit": "Not connected; app reports Petfinder HTTP 403; no independent retry in this study.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Not connected; app reports Petfinder HTTP 403; no independent retry in this study."
+  },
+  {
+    "id": "kneading-kitty",
+    "region": "Phoenix",
+    "name": "Kneading Kitty\u2019s Rescue",
+    "official_url": "https://kneadingkittysrescueaz.com/all-list-view-1",
+    "platform": "RescueGroups public widget",
+    "status": "existing_checked",
+    "count": 52,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-27T00:00:57.998Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "existing source-specific adapter",
+    "location_limit": "Public widget works in existing collector; this is not authenticated v5 API coverage.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Public widget works in existing collector; this is not authenticated v5 API coverage."
+  },
+  {
+    "id": "petfinder",
+    "region": "Phoenix",
+    "name": "Petfinder",
+    "official_url": "https://www.petfinder.com/",
+    "platform": "Petfinder aggregator",
+    "status": "existing_not_connected",
+    "count": null,
+    "count_basis": "unknown; not connected",
+    "observed_at": null,
+    "sample_count": 0,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "unproven",
+    "location_limit": "Broad aggregator, not a local organization; access unproven.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Broad aggregator, not a local organization; access unproven."
+  },
+  {
+    "id": "adopt-a-pet",
+    "region": "Phoenix",
+    "name": "Adopt a Pet \u00b7 Phoenix 50 miles",
+    "official_url": "https://www.adoptapet.com/pet-search?speciesId=2&postalCode=85003&radius=50&transport=0&sortOption=Newest&page=1",
+    "platform": "Adopt a Pet regional HTML",
+    "status": "existing_failed",
+    "count": 1268,
+    "count_basis": "stored listed records; not unique cats or independent live audit",
+    "observed_at": "2026-09-26T15:01:00.797Z",
+    "sample_count": 10,
+    "sample_basis": "cached app records; not source-vs-app fidelity verification",
+    "reuse": "shared existing adapter",
+    "location_limit": "Last check failed, prior records retained. Fixed Phoenix radius; not a national connector.",
+    "activation_gate": "Provider-specific review and reliability validation; see provider requirements",
+    "evidence": [
+      "server/providers/index.ts",
+      "phoenix.json"
+    ],
+    "notes": "Last check failed, prior records retained. Fixed Phoenix radius; not a national connector."
+  },
+  {
+    "id": "pacc",
+    "region": "Tucson",
+    "name": "Pima Animal Care Center",
+    "official_url": "https://www.pima.gov/browse-shelter-cats",
+    "platform": "24Petconnect",
+    "status": "public_sample_verified",
+    "count": 30,
+    "count_basis": "first-page cards only; total unmeasured",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 10,
+    "sample_basis": "ten profile requests returned animal IDs",
+    "reuse": "new reusable platform adapter",
+    "location_limit": "Facility/campus text; holds are not adoption-ready",
+    "activation_gate": "Prove pagination, status semantics and allowed operational use",
+    "evidence": [
+      "tucson.json"
+    ],
+    "notes": "Prove pagination, status semantics and allowed operational use"
+  },
+  {
+    "id": "hermitage",
+    "region": "Tucson",
+    "name": "Hermitage No-Kill Cat Shelter",
+    "official_url": "https://www.hermitagecatshelter.org/adopt/",
+    "platform": "Shelterluv public widget",
+    "status": "public_sample_verified",
+    "count": 148,
+    "count_basis": "unique Cat records in returned array",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 10,
+    "sample_basis": "ten published details with structured animal records",
+    "reuse": "shared new adapter with Homeward Bound",
+    "location_limit": "Room/campus labels are not coordinates",
+    "activation_gate": "Validate public interface stability, source requirements and completeness before activation",
+    "evidence": [
+      "tucson.json"
+    ],
+    "notes": "Validate public interface stability, source requirements and completeness before activation"
+  },
+  {
+    "id": "hssa",
+    "region": "Tucson",
+    "name": "Humane Society of Southern Arizona",
+    "official_url": "https://hssaz.org/adoptions/available-pets/",
+    "platform": "Adopt a Pet redirect observed through web cache",
+    "status": "access_limited",
+    "count": null,
+    "count_basis": "unknown",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 0,
+    "sample_basis": "challenge in direct request; cached redirect only",
+    "reuse": "existing family technically relevant; access unresolved",
+    "location_limit": "Organization address not individual placement",
+    "activation_gate": "Resolve feed/access; no cached counts used",
+    "evidence": [
+      "tucson.json"
+    ],
+    "notes": "Resolve feed/access; no cached counts used"
+  },
+  {
+    "id": "sacr",
+    "region": "Tucson",
+    "name": "Southern Arizona Cat Rescue",
+    "official_url": "https://sacatrescue.org/available-kittens%2Fcats",
+    "platform": "Petstablished / Wagtopia widget",
+    "status": "widget_identified",
+    "count": null,
+    "count_basis": "unknown",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 0,
+    "sample_basis": "official iframe observed; returned SPA shell, no animal payload verified",
+    "reuse": "new platform adapter candidate",
+    "location_limit": "Foster placement not established",
+    "activation_gate": "Inspect supported public widget data and exact links",
+    "evidence": [
+      "tucson.json"
+    ],
+    "notes": "Inspect supported public widget data and exact links"
+  },
+  {
+    "id": "hope",
+    "region": "Tucson",
+    "name": "HOPE Animal Shelter",
+    "official_url": "https://www.hopeanimalshelter.net/adoptable-animals",
+    "platform": "Petfinder organization AZ236",
+    "status": "access_limited",
+    "count": null,
+    "count_basis": "unknown",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 0,
+    "sample_basis": "official link found; feed request Access Denied",
+    "reuse": "Petfinder dependency",
+    "location_limit": "Shelterluv application link is not inventory proof",
+    "activation_gate": "Resolve inventory access; do not infer application feed",
+    "evidence": [
+      "tucson.json"
+    ],
+    "notes": "Resolve inventory access; do not infer application feed"
+  },
+  {
+    "id": "taf",
+    "region": "Las Vegas",
+    "name": "The Animal Foundation",
+    "official_url": "https://animalfoundation.com/what-we-do/adoption/adopt-a-pet/",
+    "platform": "Custom WordPress elevation directory",
+    "status": "partial_sample_rate_limited",
+    "count": 260,
+    "count_basis": "cat-filter response reported total; only 12 cards fetched",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 10,
+    "sample_basis": "seven detail identities retrieved; three HTTP 429",
+    "reuse": "custom adapter; generic pagination logic reusable",
+    "location_limit": "Found address differs from placement; stray intake/hold requires interpretation",
+    "activation_gate": "Validate eligibility, paginate under host pacing; stop/retry later on 429",
+    "evidence": [
+      "las-vegas.json"
+    ],
+    "notes": "Validate eligibility, paginate under host pacing; stop/retry later on 429"
+  },
+  {
+    "id": "homeward",
+    "region": "Las Vegas",
+    "name": "Homeward Bound Cat Adoptions",
+    "official_url": "https://www.homewardboundcats.org/adopt/",
+    "platform": "Shelterluv public widget",
+    "status": "public_sample_verified",
+    "count": 70,
+    "count_basis": "unique Cat records in returned array",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 10,
+    "sample_basis": "ten published details with structured animal records",
+    "reuse": "shared new adapter with Hermitage",
+    "location_limit": "Stand Alone, Black is a placement label, not a city",
+    "activation_gate": "Validate public interface stability, source requirements and completeness before activation",
+    "evidence": [
+      "las-vegas.json"
+    ],
+    "notes": "Validate public interface stability, source requirements and completeness before activation"
+  },
+  {
+    "id": "henderson",
+    "region": "Las Vegas",
+    "name": "Henderson Animal Protection Services",
+    "official_url": "https://www.cityofhenderson.com/government/departments/community-development-and-services/animal-protection-services/pets-available-for-adoption",
+    "platform": "Unresolved",
+    "status": "access_limited",
+    "count": null,
+    "count_basis": "unknown",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 0,
+    "sample_basis": "official page direct/web access failed; search indexed official page",
+    "reuse": "unproven",
+    "location_limit": "Facility address cannot establish every cat location",
+    "activation_gate": "Inspect public page interactively or obtain supported feed information",
+    "evidence": [
+      "las-vegas.json"
+    ],
+    "notes": "Inspect public page interactively or obtain supported feed information"
+  },
+  {
+    "id": "nspca",
+    "region": "Las Vegas",
+    "name": "Nevada SPCA",
+    "official_url": "https://nevadaspca.org/adopt/adoptable-pets/",
+    "platform": "WordPress public profiles; Shelterluv images",
+    "status": "cached_profiles_only",
+    "count": null,
+    "count_basis": "51 all-species cached results not a cat count",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 10,
+    "sample_basis": "four cached profiles accessible, six unsuccessful in web tool",
+    "reuse": "custom wrapper or public widget still to identify",
+    "location_limit": "Office Foster does not specify distance",
+    "activation_gate": "Get live inventory enumeration; do not invent links from names",
+    "evidence": [
+      "las-vegas.json"
+    ],
+    "notes": "Get live inventory enumeration; do not invent links from names"
+  },
+  {
+    "id": "hav",
+    "region": "Las Vegas",
+    "name": "Hearts Alive Village",
+    "official_url": "https://heartsalivevillage.org/adopt/adoptable-cats/",
+    "platform": "Unresolved embedded inventory",
+    "status": "access_limited",
+    "count": null,
+    "count_basis": "unknown",
+    "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+    "sample_count": 0,
+    "sample_basis": "direct HTTP 403; official indexed page confirms adoption program, no inventory payload",
+    "reuse": "unproven",
+    "location_limit": "Multiple adoption locations and foster placements",
+    "activation_gate": "Identify public feed; org confirmation is not connector completion",
+    "evidence": [
+      "las-vegas.json"
+    ],
+    "notes": "Identify public feed; org confirmation is not connector completion"
+  }
+]

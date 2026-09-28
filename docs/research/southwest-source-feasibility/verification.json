@@ -1,0 +1,26 @@
+{
+  "verified_at": "2026-09-27T08:02:43.700962+00:00",
+  "matrix_entries": 22,
+  "region_counts": {
+    "Phoenix": 12,
+    "Tucson": 5,
+    "Las Vegas": 5
+  },
+  "cached_phoenix_samples": 100,
+  "json_csv_parse": "pass",
+  "local_markdown_links": "pass",
+  "aggregate_counts": {
+    "listed": 1758,
+    "unknownAge": 646,
+    "unknownCity": 308,
+    "unknownFee": 1653
+  },
+  "credential_pattern_scan": "pass; bounded pattern check, not a general security audit",
+  "structured_shelterluv_identity_checks": "20 matching IDs, zero mismatches; separate direct check",
+  "repo_head": "1e2db1bbf35c0279c9f5036a491ba7e8a031ee9c",
+  "repo_status_before_copy": "clean",
+  "limitations": "Documentation only; no app tests or long-term trial run.",
+  "repo_status_after_copy": "only study directory untracked; no tracked or staged changes",
+  "copied_files": 18,
+  "copy_verified_at": "2026-09-27T08:03:07.245781+00:00"
+}

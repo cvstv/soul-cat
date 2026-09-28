@@ -1,6 +1,6 @@
 const ALLOWED_ORIGINS = new Set([
   'https://www.adoptapet.com', 'https://aawl.org', 'https://apps.pets.maricopa.gov', 'https://toolkit.rescuegroups.org', 'https://www.savingonelife.org', 'https://ws.petango.com',
-  'https://service.sheltermanager.com', 'https://us06d.sheltermanager.com', 'https://www.lostourhome.org',
+  'https://service.sheltermanager.com', 'https://us06d.sheltermanager.com', 'https://www.lostourhome.org', 'https://www.shelterluv.com',
 ]);
 export const MAX_BYTES = 5 * 1024 * 1024;
 /** Fixed registry URLs only. Redirects are revalidated before each request. */
@@ -10,7 +10,7 @@ export async function fetchPublicText(input: string): Promise<string> {
     let url = new URL(input);
     for (let redirects = 0; redirects <= 3; redirects++) {
       if (!ALLOWED_ORIGINS.has(url.origin) || url.username || url.password) throw new Error('Source URL origin not allowed');
-      const response = await fetch(url, { signal: controller.signal, redirect: 'manual', headers: { Accept: 'text/html,application/javascript,text/javascript', 'User-Agent': 'SoulCat/1.0 public adoption inventory' } });
+      const response = await fetch(url, { signal: controller.signal, redirect: 'manual', headers: { Accept: 'application/json,text/html,application/javascript,text/javascript', 'User-Agent': 'SoulCat/1.0 public adoption inventory' } });
       if ([301, 302, 303, 307, 308].includes(response.status)) {
         await response.body?.cancel();
         const next = response.headers.get('location'); if (!next) throw new Error('Source redirect missing location');

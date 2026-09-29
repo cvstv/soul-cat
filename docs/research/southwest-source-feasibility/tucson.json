@@ -1,0 +1,492 @@
+{
+  "sources": [
+    {
+      "id": "pacc",
+      "region": "Tucson",
+      "name": "Pima Animal Care Center",
+      "official_url": "https://www.pima.gov/browse-shelter-cats",
+      "platform": "24Petconnect",
+      "status": "public_sample_verified",
+      "count": 30,
+      "count_basis": "first-page cards only; total unmeasured",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 10,
+      "sample_basis": "ten profile requests returned animal IDs",
+      "reuse": "new reusable platform adapter",
+      "location_limit": "Facility/campus text; holds are not adoption-ready",
+      "activation_gate": "Prove pagination, status semantics and allowed operational use",
+      "evidence": [
+        "tucson.json"
+      ],
+      "notes": "Prove pagination, status semantics and allowed operational use"
+    },
+    {
+      "id": "hermitage",
+      "region": "Tucson",
+      "name": "Hermitage No-Kill Cat Shelter",
+      "official_url": "https://www.hermitagecatshelter.org/adopt/",
+      "platform": "Shelterluv public widget",
+      "status": "public_sample_verified",
+      "count": 148,
+      "count_basis": "unique Cat records in returned array",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 10,
+      "sample_basis": "ten published details with structured animal records",
+      "reuse": "shared new adapter with Homeward Bound",
+      "location_limit": "Room/campus labels are not coordinates",
+      "activation_gate": "Validate public interface stability, source requirements and completeness before activation",
+      "evidence": [
+        "tucson.json"
+      ],
+      "notes": "Validate public interface stability, source requirements and completeness before activation"
+    },
+    {
+      "id": "hssa",
+      "region": "Tucson",
+      "name": "Humane Society of Southern Arizona",
+      "official_url": "https://hssaz.org/adoptions/available-pets/",
+      "platform": "Adopt a Pet redirect observed through web cache",
+      "status": "access_limited",
+      "count": null,
+      "count_basis": "unknown",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 0,
+      "sample_basis": "challenge in direct request; cached redirect only",
+      "reuse": "existing family technically relevant; access unresolved",
+      "location_limit": "Organization address not individual placement",
+      "activation_gate": "Resolve feed/access; no cached counts used",
+      "evidence": [
+        "tucson.json"
+      ],
+      "notes": "Resolve feed/access; no cached counts used"
+    },
+    {
+      "id": "sacr",
+      "region": "Tucson",
+      "name": "Southern Arizona Cat Rescue",
+      "official_url": "https://sacatrescue.org/available-kittens%2Fcats",
+      "platform": "Petstablished / Wagtopia widget",
+      "status": "widget_identified",
+      "count": null,
+      "count_basis": "unknown",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 0,
+      "sample_basis": "official iframe observed; returned SPA shell, no animal payload verified",
+      "reuse": "new platform adapter candidate",
+      "location_limit": "Foster placement not established",
+      "activation_gate": "Inspect supported public widget data and exact links",
+      "evidence": [
+        "tucson.json"
+      ],
+      "notes": "Inspect supported public widget data and exact links"
+    },
+    {
+      "id": "hope",
+      "region": "Tucson",
+      "name": "HOPE Animal Shelter",
+      "official_url": "https://www.hopeanimalshelter.net/adoptable-animals",
+      "platform": "Petfinder organization AZ236",
+      "status": "access_limited",
+      "count": null,
+      "count_basis": "unknown",
+      "observed_at": "2026-09-27 (retrieval; cached pages have older crawl dates)",
+      "sample_count": 0,
+      "sample_basis": "official link found; feed request Access Denied",
+      "reuse": "Petfinder dependency",
+      "location_limit": "Shelterluv application link is not inventory proof",
+      "activation_gate": "Resolve inventory access; do not infer application feed",
+      "evidence": [
+        "tucson.json"
+      ],
+      "notes": "Resolve inventory access; do not infer application feed"
+    }
+  ],
+  "samples": {
+    "hermitage": [
+      {
+        "uniqueId": "HERM-A-27",
+        "name": "Silly Me",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Orange",
+        "secondary_color": null,
+        "sex": "Male",
+        "birthday": "1648237930",
+        "location": "Adoptions Lobby",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-27"
+      },
+      {
+        "uniqueId": "HERM-A-65",
+        "name": "Hostess",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Tortoise",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1589423411",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-65"
+      },
+      {
+        "uniqueId": "HERM-A-662",
+        "name": "Koru",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Black",
+        "secondary_color": "White",
+        "sex": "Male",
+        "birthday": "1389427200",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-662"
+      },
+      {
+        "uniqueId": "HERM-A-1475",
+        "name": "Creamsickle",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Orange",
+        "secondary_color": "White",
+        "sex": "Female",
+        "birthday": "1475910000",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-1475"
+      },
+      {
+        "uniqueId": "HERM-A-1908",
+        "name": "Puff",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Black",
+        "secondary_color": null,
+        "sex": "Male",
+        "birthday": "1367218800",
+        "location": "Mature Meowers",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-1908"
+      },
+      {
+        "uniqueId": "HERM-A-2047",
+        "name": "Fabiana",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Black",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1506841200",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-2047"
+      },
+      {
+        "uniqueId": "HERM-A-2342",
+        "name": "Lavelle",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Calico",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1469343600",
+        "location": "Adoptions Lobby",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-2342"
+      },
+      {
+        "uniqueId": "HERM-A-2677",
+        "name": "Ginger",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Tortoise",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1532934000",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-2677"
+      },
+      {
+        "uniqueId": "HERM-A-2838",
+        "name": "Castle",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Brown",
+        "secondary_color": "White",
+        "sex": "Female",
+        "birthday": "1510992000",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-2838"
+      },
+      {
+        "uniqueId": "HERM-A-3032",
+        "name": "Tempo",
+        "species": "Cat",
+        "breed": "Domestic Shorthair",
+        "primary_color": "Calico",
+        "secondary_color": null,
+        "sex": "Female",
+        "birthday": "1592722800",
+        "location": "General Population (103 Allowable Occupancy)",
+        "campus": "Main Campus",
+        "public_url": "https://www.shelterluv.com/embed/animal/HERM-A-3032"
+      }
+    ],
+    "pacc": [
+      {
+        "animalId": "A871089",
+        "name": "Sir Squeak*",
+        "breed": "Domestic Shorthair",
+        "sex": "Spayed Female",
+        "age": "1 Year, 5 Months Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A871089"
+      },
+      {
+        "animalId": "A899405",
+        "name": "Anna",
+        "breed": "Domestic Longhair",
+        "sex": "Spayed Female",
+        "age": "3 Years Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A899405"
+      },
+      {
+        "animalId": "A909791",
+        "name": "Sparkle*",
+        "breed": "Domestic Shorthair",
+        "sex": "Unaltered Male",
+        "age": "6 Weeks Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909791"
+      },
+      {
+        "animalId": "A909801",
+        "name": "Noir*",
+        "breed": "Domestic Shorthair",
+        "sex": "Spayed Female",
+        "age": "15 Years Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909801"
+      },
+      {
+        "animalId": "A909802",
+        "name": "Betty*",
+        "breed": "Domestic Shorthair",
+        "sex": "Spayed Female",
+        "age": "12 Years Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909802"
+      },
+      {
+        "animalId": "A909709",
+        "name": "Michi",
+        "breed": "Domestic Shorthair",
+        "sex": "Spayed Female",
+        "age": "2 Years Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909709"
+      },
+      {
+        "animalId": "A909204",
+        "name": "Eartha",
+        "breed": "Domestic Longhair",
+        "sex": "Spayed Female",
+        "age": "7 Years Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909204"
+      },
+      {
+        "animalId": "A908851",
+        "name": "Annie Lennox*",
+        "breed": "Domestic Shorthair",
+        "sex": "Unaltered Female",
+        "age": "1 Year Old",
+        "location": "Foster Home",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A908851"
+      },
+      {
+        "animalId": "A908983",
+        "name": "Shakespeare",
+        "breed": "Domestic Shorthair",
+        "sex": "Neutered Male",
+        "age": "1 Year Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A908983"
+      },
+      {
+        "animalId": "A908895",
+        "name": "Robin Hood",
+        "breed": "Domestic Shorthair",
+        "sex": "Neutered Male",
+        "age": "3 Months Old",
+        "location": "Pima Animal Care Center - Tucson",
+        "adoptionUrl": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A908895"
+      }
+    ]
+  },
+  "detail_checks": [
+    {
+      "source": "hermitage",
+      "id": "HERM-A-27",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-27",
+      "observed_at": "2026-09-27T07:53:18.636260+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-65",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-65",
+      "observed_at": "2026-09-27T07:53:18.586884+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-662",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-662",
+      "observed_at": "2026-09-27T07:53:18.672414+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-1475",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-1475",
+      "observed_at": "2026-09-27T07:53:18.863507+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-1908",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-1908",
+      "observed_at": "2026-09-27T07:53:18.917733+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-2047",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-2047",
+      "observed_at": "2026-09-27T07:53:18.917457+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-2342",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-2342",
+      "observed_at": "2026-09-27T07:53:19.165314+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-2677",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-2677",
+      "observed_at": "2026-09-27T07:53:19.229721+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-2838",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-2838",
+      "observed_at": "2026-09-27T07:53:19.233953+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "hermitage",
+      "id": "HERM-A-3032",
+      "url": "https://www.shelterluv.com/embed/animal/HERM-A-3032",
+      "observed_at": "2026-09-27T07:53:19.444209+00:00",
+      "verified": true,
+      "error": null
+    },
+    {
+      "source": "pacc",
+      "id": "A871089",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A871089",
+      "observed_at": "2026-09-27T07:53:55.148831+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A899405",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A899405",
+      "observed_at": "2026-09-27T07:53:55.152821+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A909791",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909791",
+      "observed_at": "2026-09-27T07:53:55.145727+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A909801",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909801",
+      "observed_at": "2026-09-27T07:53:55.725882+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A909802",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909802",
+      "observed_at": "2026-09-27T07:53:55.577108+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A909709",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909709",
+      "observed_at": "2026-09-27T07:53:55.602561+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A909204",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A909204",
+      "observed_at": "2026-09-27T07:53:55.999887+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A908851",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A908851",
+      "observed_at": "2026-09-27T07:53:56.032823+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A908983",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A908983",
+      "observed_at": "2026-09-27T07:53:56.140938+00:00",
+      "verified": true,
+      "error": ""
+    },
+    {
+      "source": "pacc",
+      "id": "A908895",
+      "url": "https://24petconnect.com/PimaAdoptableCats/Details/PIMA/A908895",
+      "observed_at": "2026-09-27T07:53:56.443972+00:00",
+      "verified": true,
+      "error": ""
+    }
+  ]
+}

@@ -74,6 +74,18 @@ test('transport bounds streamed bytes and reports HTTP errors/challenges/blank b
     }
   } finally { globalThis.fetch = original; }
 });
+test('transport retries transient network failure without accepting an invalid TLS response',async()=>{
+ const original=globalThis.fetch;let calls=0;
+ globalThis.fetch=(async()=>{calls++;if(calls===1)throw new TypeError('fetch failed');return new Response('{"animals":[]}');}) as typeof fetch;
+ try{assert.equal(await fetchPublicText('https://www.shelterluv.com/api/v3/available-animals/38723'),'{"animals":[]}');assert.equal(calls,2);}
+ finally{globalThis.fetch=original;}
+});
+test('transport stops after three TLS-level network failures',async()=>{
+ const original=globalThis.fetch;let calls=0;
+ globalThis.fetch=(async()=>{calls++;throw new TypeError('certificate rejected');}) as typeof fetch;
+ try{await assert.rejects(fetchPublicText('https://www.shelterluv.com/api/v3/available-animals/38723'),/certificate rejected/);assert.equal(calls,3);}
+ finally{globalThis.fetch=original;}
+});
 
 
 test('city inference uses only literal location evidence and preserves ambiguous or absent cities', () => {

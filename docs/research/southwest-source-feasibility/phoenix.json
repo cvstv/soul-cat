@@ -1,0 +1,1226 @@
+{
+  "basis": "Production snapshot retained before 2026-09-27 07:43Z; lastSuccess is source metadata, not this study retrieval time",
+  "total_records": 2117,
+  "listed": 1758,
+  "not_listed": 359,
+  "sources": [
+    {
+      "source": "saving-one-life",
+      "listed": 104,
+      "unknownAge": 9,
+      "unknownCity": 104,
+      "unknownFee": 104,
+      "fragmentLinks": 104,
+      "samples": [
+        {
+          "animalId": "22773105",
+          "name": "Ramon Rambler",
+          "breed": "Tuxedo Domestic Short Hair",
+          "coat": "Tuxedo",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Ramon%20Rambler",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22773104",
+          "name": "Ricky Rambler",
+          "breed": "Tabby Domestic Short Hair",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Ricky%20Rambler",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22773103",
+          "name": "Roddy Rambler",
+          "breed": "Tabby Domestic Short Hair",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Roddy%20Rambler",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22770769",
+          "name": "Milk Shake",
+          "breed": "Domestic Short Hair Tuxedo",
+          "coat": "Tuxedo",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Milk%20Shake",
+          "ageMonths": 48,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22770767",
+          "name": "Tempo Crescendo",
+          "breed": "Domestic Short Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Tempo%20Crescendo",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22765419",
+          "name": "Felicia Please",
+          "breed": "Domestic Short Hair Tuxedo",
+          "coat": "Tuxedo",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Felicia%20Please",
+          "ageMonths": null,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22762766",
+          "name": "Rose Mary",
+          "breed": "Domestic Short Hair Tabby",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Rose%20Mary",
+          "ageMonths": null,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22762764",
+          "name": "Tails Brother Bonded With Sonic Brother",
+          "breed": "Domestic Short Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Tails%20Brother%20Bonded%20With%20Sonic%20Brother",
+          "ageMonths": 42,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22762763",
+          "name": "Sonic Brother Bonded With Tails Brother",
+          "breed": "Domestic Short Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Sonic%20Brother%20Bonded%20With%20Tails%20Brother",
+          "ageMonths": 42,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22762759",
+          "name": "Fancy Pants",
+          "breed": "Domestic Short Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://www.savingonelife.org/adopt/available/#:~:text=Fancy%20Pants",
+          "ageMonths": 25,
+          "sex": "Male"
+        }
+      ]
+    },
+    {
+      "source": "halo",
+      "listed": 34,
+      "unknownAge": 0,
+      "unknownCity": 2,
+      "unknownFee": 34,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "60768530",
+          "name": "Angel",
+          "breed": "Domestic Longhair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Foster Home",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60768530&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 29,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "60768534",
+          "name": "Sir William Edwards",
+          "breed": "Domestic Longhair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Foster Home",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60768534&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 29,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "61166737",
+          "name": "Crumpet",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "3227 E. Bell Rd Phoenix,Az 85032",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61166737&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 13,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "61166742",
+          "name": "Tea",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "3227 E. Bell Rd Phoenix,Az 85032",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61166742&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 13,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "61272688",
+          "name": "Kevin",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "3227 E. Bell Rd Phoenix,Az 85032",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61272688&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 27,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "61355577",
+          "name": "Gary",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "2901 W. Agua Fria Fwy. Phx. AZ. 85027",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61355577&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 6,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "61397421",
+          "name": "Soup",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "2901 W. Agua Fria Fwy. Phx. AZ. 85027",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61397421&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 3,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "61397427",
+          "name": "Breadstick",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "2901 W. Agua Fria Fwy. Phx. AZ. 85027",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61397427&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 3,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "61565560",
+          "name": "Rue",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Phoenix",
+          "location": "3227 E. Bell Rd Phoenix,Az 85032",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61565560&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 19,
+          "sex": "Female"
+        },
+        {
+          "animalId": "61353083",
+          "name": "Margot",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Glendale",
+          "location": "5707 W. Northern Ave. Glendale AZ 85301",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61353083&css=https://ws.petango.com/WebServices/adoptablesearch/css/styles.css&authkey=p1hcyln2w8x44ggh4axsf25ldm2r7ukd1nsv48xu5dhh4pnlqh&PopUp=true",
+          "ageMonths": 2,
+          "sex": "Female/Spayed"
+        }
+      ]
+    },
+    {
+      "source": "friends-for-life",
+      "listed": 10,
+      "unknownAge": 0,
+      "unknownCity": 10,
+      "unknownFee": 10,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "22068",
+          "name": "Cranberry Sauce",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby and White",
+          "city": "Unknown",
+          "location": "Cat House::Room 1",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22068",
+          "ageMonths": 82,
+          "sex": "Male"
+        },
+        {
+          "animalId": "21190",
+          "name": "Kissmas",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Foster::Boehnke, Shonte",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=21190",
+          "ageMonths": 33,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22120",
+          "name": "Laramie",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby and White",
+          "city": "Unknown",
+          "location": "Cat House::Room 3",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22120",
+          "ageMonths": 45,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22587",
+          "name": "Maxi",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby and White",
+          "city": "Unknown",
+          "location": "Cat House::Room 4",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22587",
+          "ageMonths": 6,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22653",
+          "name": "Nemi",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Cat House::Room 4",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22653",
+          "ageMonths": 4.59958932238193,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22654",
+          "name": "Odie",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby and White",
+          "city": "Unknown",
+          "location": "Foster::Netcharussaeng, Pine",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22654",
+          "ageMonths": 4.59958932238193,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22649",
+          "name": "Percy",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Cat House::Room 4",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22649",
+          "ageMonths": 4.59958932238193,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22656",
+          "name": "Suki",
+          "breed": "Domestic Short Hair",
+          "coat": "Tabby and White",
+          "city": "Unknown",
+          "location": "Cat House::Room 4",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22656",
+          "ageMonths": 4.59958932238193,
+          "sex": "Female"
+        },
+        {
+          "animalId": "21813",
+          "name": "Nola",
+          "breed": "Domestic Short Hair",
+          "coat": "White and Tabby",
+          "city": "Unknown",
+          "location": "Cat House::Room 1",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=21813",
+          "ageMonths": 68,
+          "sex": "Female"
+        },
+        {
+          "animalId": "22492",
+          "name": "Mavis",
+          "breed": "Domestic Short Hair",
+          "coat": "Black",
+          "city": "Unknown",
+          "location": "Cat House::Foster Room",
+          "adoptionUrl": "https://us06d.sheltermanager.com/service?account=zp1008&method=animal_view&animalid=22492",
+          "ageMonths": 28,
+          "sex": "Female"
+        }
+      ]
+    },
+    {
+      "source": "lost-our-home",
+      "listed": 24,
+      "unknownAge": 0,
+      "unknownCity": 24,
+      "unknownFee": 24,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "212891764",
+          "name": "Vinny",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available in Foster",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=212891764",
+          "ageMonths": 55,
+          "sex": "Male"
+        },
+        {
+          "animalId": "212971875",
+          "name": "Branna",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available in Foster",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=212971875",
+          "ageMonths": 79,
+          "sex": "Female"
+        },
+        {
+          "animalId": "70095311",
+          "name": "Snow",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=70095311",
+          "ageMonths": 40,
+          "sex": "Male"
+        },
+        {
+          "animalId": "213838175",
+          "name": "Ambi",
+          "breed": "Domestic Medium Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=213838175",
+          "ageMonths": 6,
+          "sex": "Female"
+        },
+        {
+          "animalId": "214172463",
+          "name": "Jelly Bean",
+          "breed": "Domestic Medium Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=214172463",
+          "ageMonths": 4,
+          "sex": "Male"
+        },
+        {
+          "animalId": "214172467",
+          "name": "Skittles",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=214172467",
+          "ageMonths": 4,
+          "sex": "Female"
+        },
+        {
+          "animalId": "214172468",
+          "name": "Twix",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=214172468",
+          "ageMonths": 4,
+          "sex": "Male"
+        },
+        {
+          "animalId": "214172473",
+          "name": "Gummi Bear",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=214172473",
+          "ageMonths": 4,
+          "sex": "Male"
+        },
+        {
+          "animalId": "214437876",
+          "name": "Paul Blart",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=214437876",
+          "ageMonths": 24,
+          "sex": "Male"
+        },
+        {
+          "animalId": "83349982",
+          "name": "Marshmallow Smores",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Available (behavior consult)",
+          "adoptionUrl": "https://www.lostourhome.org/adopt-a-pet/animal-info?aid=83349982",
+          "ageMonths": 67,
+          "sex": "Female"
+        }
+      ]
+    },
+    {
+      "source": "fearless-kitty",
+      "listed": 63,
+      "unknownAge": 0,
+      "unknownCity": 63,
+      "unknownFee": 63,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "60691592",
+          "name": "Ajax Angel",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60691592&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 24,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "56850043",
+          "name": "Balam",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=56850043&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 29,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "60970507",
+          "name": "Blakey",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60970507&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 76,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "61643705",
+          "name": "Bobbi Cat",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61643705&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 12,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "60785443",
+          "name": "Bojo",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60785443&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 17,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "60830300",
+          "name": "Bubbles V",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60830300&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 41,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "61397739",
+          "name": "Callianna",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61397739&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 50,
+          "sex": "Female/Spayed"
+        },
+        {
+          "animalId": "60873842",
+          "name": "Caprice",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=60873842&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 6,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "61592961",
+          "name": "Chuckie",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=61592961&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 59,
+          "sex": "Male/Neutered"
+        },
+        {
+          "animalId": "59089736",
+          "name": "Cleo Azalea",
+          "breed": "Domestic Shorthair/Mix",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Adoption Center",
+          "adoptionUrl": "https://ws.petango.com/webservices/adoptablesearch/wsAdoptableAnimalDetails2.aspx?id=59089736&css=&authkey=4dnxx4ls4al30uhflxneid5b6j00j4n4qmv5wvxa5oi05fryc4&PopUp=true",
+          "ageMonths": 37,
+          "sex": "Female/Spayed"
+        }
+      ]
+    },
+    {
+      "source": "ahs",
+      "listed": 150,
+      "unknownAge": 0,
+      "unknownCity": 0,
+      "unknownFee": 150,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "49444763",
+          "name": "FAUCET",
+          "breed": "Domestic Shorthair",
+          "coat": "Brown Tabby",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49444763-phoenix-arizona-cat",
+          "ageMonths": 24,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49442834",
+          "name": "ETHEL",
+          "breed": "Domestic Shorthair",
+          "coat": "All Black",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49442834-phoenix-arizona-cat",
+          "ageMonths": 3,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49442833",
+          "name": "LUCY",
+          "breed": "Domestic Shorthair",
+          "coat": "All Black",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49442833-phoenix-arizona-cat",
+          "ageMonths": 3,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49442506",
+          "name": "NYX",
+          "breed": "Domestic Shorthair",
+          "coat": "Brown Tabby",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49442506-phoenix-arizona-cat",
+          "ageMonths": 2,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49441864",
+          "name": "GRAYSON",
+          "breed": "Domestic Shorthair",
+          "coat": "All Black",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49441864-phoenix-arizona-cat",
+          "ageMonths": 36,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49440670",
+          "name": "DEAN",
+          "breed": "Domestic Shorthair",
+          "coat": "Brown Tabby",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49440670-phoenix-arizona-cat",
+          "ageMonths": 2,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49440671",
+          "name": "SAM",
+          "breed": "Domestic Shorthair",
+          "coat": "Brown Tabby",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49440671-phoenix-arizona-cat",
+          "ageMonths": 2,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49439119",
+          "name": "PUCK",
+          "breed": "Domestic Shorthair",
+          "coat": "All Black",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49439119-phoenix-arizona-cat",
+          "ageMonths": 36,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49439115",
+          "name": "REGGIE",
+          "breed": "Domestic Mediumhair",
+          "coat": "Gray, Blue or Silver Tabby",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49439115-phoenix-arizona-cat",
+          "ageMonths": 48,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49439071",
+          "name": "POPPY",
+          "breed": "Domestic Shorthair",
+          "coat": "Tortoiseshell",
+          "city": "Phoenix",
+          "location": "Phoenix, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49439071-phoenix-arizona-cat",
+          "ageMonths": 1,
+          "sex": "Female"
+        }
+      ]
+    },
+    {
+      "source": "mcacc",
+      "listed": 11,
+      "unknownAge": 0,
+      "unknownCity": 11,
+      "unknownFee": 0,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "A5171335",
+          "name": "SCALLOP",
+          "breed": "GRAY TAB/WHITE DOMESTIC MH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "West Kennel, Wing K - 504",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171335",
+          "ageMonths": 120,
+          "sex": "Female"
+        },
+        {
+          "animalId": "A5171593",
+          "name": "SUSHI",
+          "breed": "GRAY TAB/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO1156",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171593",
+          "ageMonths": 1.839835728952772,
+          "sex": "Male"
+        },
+        {
+          "animalId": "A5171595",
+          "name": "BENTO",
+          "breed": "WHITE/GRAY TAB DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO1156",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171595",
+          "ageMonths": 1.839835728952772,
+          "sex": "Male"
+        },
+        {
+          "animalId": "A5171594",
+          "name": "BLOSSOM",
+          "breed": "GRAY TAB/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO1156",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171594",
+          "ageMonths": 1.839835728952772,
+          "sex": "Female"
+        },
+        {
+          "animalId": "A5171592",
+          "name": "SAMURAI",
+          "breed": "BLACK/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO575",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171592",
+          "ageMonths": 36,
+          "sex": "Female"
+        },
+        {
+          "animalId": "A5171450",
+          "name": "SAMMY",
+          "breed": "GRAY TAB/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO575",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171450",
+          "ageMonths": 1.839835728952772,
+          "sex": "Female"
+        },
+        {
+          "animalId": "A5171455",
+          "name": "DORI",
+          "breed": "GRAY TAB/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO575",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171455",
+          "ageMonths": 1.839835728952772,
+          "sex": "Female"
+        },
+        {
+          "animalId": "A5172130",
+          "name": "HENRY",
+          "breed": "GRAY/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO575",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5172130",
+          "ageMonths": 4,
+          "sex": "Male"
+        },
+        {
+          "animalId": "A5171447",
+          "name": "BING",
+          "breed": "GRAY TAB/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO575",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171447",
+          "ageMonths": 1.839835728952772,
+          "sex": "Male"
+        },
+        {
+          "animalId": "A5171452",
+          "name": "POGO",
+          "breed": "GRAY TAB/WHITE DOMESTIC SH",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "PETCO575",
+          "adoptionUrl": "https://apps.pets.maricopa.gov/adoptPets/Home/Details/A5171452",
+          "ageMonths": 1.839835728952772,
+          "sex": "Male"
+        }
+      ]
+    },
+    {
+      "source": "aawl",
+      "listed": 42,
+      "unknownAge": 0,
+      "unknownCity": 42,
+      "unknownFee": 0,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "60902814",
+          "name": "Arrietty",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/60902814/",
+          "ageMonths": 6,
+          "sex": "Female"
+        },
+        {
+          "animalId": "60902767",
+          "name": "Ponyo",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/60902767/",
+          "ageMonths": 6,
+          "sex": "Female"
+        },
+        {
+          "animalId": "61281189",
+          "name": "Red Delicious",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61281189/",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "60125207",
+          "name": "Tara",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/60125207/",
+          "ageMonths": 32,
+          "sex": "Female"
+        },
+        {
+          "animalId": "61610803",
+          "name": "Higgins",
+          "breed": "Domestic Medium Hair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61610803/",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "61703531",
+          "name": "Coyote",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61703531/",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "61730685",
+          "name": "Jimmy",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61730685/",
+          "ageMonths": 2,
+          "sex": "Male"
+        },
+        {
+          "animalId": "61730730",
+          "name": "Michael",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61730730/",
+          "ageMonths": 2,
+          "sex": "Male"
+        },
+        {
+          "animalId": "61473840",
+          "name": "Coconut",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61473840/",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "61647875",
+          "name": "Janis",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Main Shelter \u2013 40th St & Washington",
+          "adoptionUrl": "https://aawl.org/adopt/61647875/",
+          "ageMonths": 2,
+          "sex": "Female"
+        }
+      ]
+    },
+    {
+      "source": "desert-paws",
+      "listed": 0,
+      "unknownAge": 0,
+      "unknownCity": 0,
+      "unknownFee": 0,
+      "fragmentLinks": 0,
+      "samples": []
+    },
+    {
+      "source": "kneading-kitty",
+      "listed": 52,
+      "unknownAge": 0,
+      "unknownCity": 52,
+      "unknownFee": 0,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "21760107",
+          "name": "Bear Bear",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=21760107&k=7816",
+          "ageMonths": 16,
+          "sex": "Male"
+        },
+        {
+          "animalId": "21841521",
+          "name": "Bingo (FIV+)",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=21841521&k=7816",
+          "ageMonths": 108,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22321555",
+          "name": "Biscuit (FIV+)",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=22321555&k=7816",
+          "ageMonths": 54,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22163495",
+          "name": "Bonny",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=22163495&k=7816",
+          "ageMonths": 11,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22622733",
+          "name": "Brooks",
+          "breed": "Domestic Medium Hair / Tabby (medium coat)",
+          "coat": "Tabby",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=22622733&k=7816",
+          "ageMonths": 4,
+          "sex": "Male"
+        },
+        {
+          "animalId": "21407778",
+          "name": "Burrata",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=21407778&k=7816",
+          "ageMonths": 18,
+          "sex": "Female"
+        },
+        {
+          "animalId": "21371490",
+          "name": "Butters (FIV+)",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=21371490&k=7816",
+          "ageMonths": 114,
+          "sex": "Male"
+        },
+        {
+          "animalId": "22457031",
+          "name": "Callie",
+          "breed": "Calico (short coat)",
+          "coat": "Calico",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=22457031&k=7816",
+          "ageMonths": 40,
+          "sex": "Female"
+        },
+        {
+          "animalId": "17733112",
+          "name": "Cami",
+          "breed": "Calico (short coat)",
+          "coat": "Calico",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=17733112&k=7816",
+          "ageMonths": 58,
+          "sex": "Female"
+        },
+        {
+          "animalId": "20315447",
+          "name": "Capri",
+          "breed": "Domestic Short Hair (short coat)",
+          "coat": "Unknown",
+          "city": "Unknown",
+          "location": "Unknown",
+          "adoptionUrl": "https://toolkit.rescuegroups.org/j/3/pet?a=20315447&k=7816",
+          "ageMonths": 37,
+          "sex": "Female"
+        }
+      ]
+    },
+    {
+      "source": "petfinder",
+      "listed": 0,
+      "unknownAge": 0,
+      "unknownCity": 0,
+      "unknownFee": 0,
+      "fragmentLinks": 0,
+      "samples": []
+    },
+    {
+      "source": "adopt-a-pet",
+      "listed": 1268,
+      "unknownAge": 637,
+      "unknownCity": 0,
+      "unknownFee": 1268,
+      "fragmentLinks": 0,
+      "samples": [
+        {
+          "animalId": "49445777",
+          "name": "Short Cake",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445777-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445776",
+          "name": "Roz",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445776-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445775",
+          "name": "Rocky Road",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445775-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49445774",
+          "name": "Precious",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445774-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445773",
+          "name": "Pepsi",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445773-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Male"
+        },
+        {
+          "animalId": "49445772",
+          "name": "Missy 26",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445772-peoria-arizona-cat",
+          "ageMonths": 11,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445771",
+          "name": "Marilyn",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445771-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445770",
+          "name": "Lolo",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445770-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445769",
+          "name": "Krispy Kreme",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445769-peoria-arizona-cat",
+          "ageMonths": 6,
+          "sex": "Female"
+        },
+        {
+          "animalId": "49445768",
+          "name": "Joy",
+          "breed": "Domestic Shorthair",
+          "coat": "Unknown",
+          "city": "Peoria",
+          "location": "Peoria, AZ",
+          "adoptionUrl": "https://www.adoptapet.com/pet/49445768-peoria-arizona-cat",
+          "ageMonths": 5,
+          "sex": "Female"
+        }
+      ]
+    }
+  ]
+}

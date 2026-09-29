@@ -1,0 +1,128 @@
+[
+  {
+    "local_temporary_file": "/private/tmp/soulcat-phoenix-inventory.json",
+    "bytes": 2900110,
+    "sha256": "ad99c0ef7d5b08fbac21654206235bb771cf5322c47461da2f2f5a61b379c233",
+    "file_modified_at": "2026-09-27T07:43:59.996330+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/hermitage-data.txt",
+    "bytes": 317570,
+    "sha256": "8797be481a013d0d5bebc75628c768514fc492be2423dcd162fe1a59cd34dd98",
+    "file_modified_at": "2026-09-27T07:52:35.514437+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/homeward-data.txt",
+    "bytes": 87162,
+    "sha256": "98a0105e4be1cdb5c31f018594753b182e7c56b796c7842bb0263dbd9e709993",
+    "file_modified_at": "2026-09-27T07:52:35.132656+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/vegas-research/taf-cats.json",
+    "bytes": 12399,
+    "sha256": "0539129a5db22e7cd36633a3af7b1cfd772fde2fd4aed9b15dd39dbe727fc0aa",
+    "file_modified_at": "2026-09-27T07:51:57.817725+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/hope.html",
+    "bytes": 730105,
+    "sha256": "5d7d3976472091c9e7352571e486eafecd07d960af558616fa59aaf8a077d38a",
+    "file_modified_at": "2026-09-27T07:43:53.438908+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/sacrfeed.html",
+    "bytes": 2510,
+    "sha256": "2ca0cb7fa0831b0c92e6e3cc405fe47e107d12af14392a75c7ff7f4817f0b73e",
+    "file_modified_at": "2026-09-27T07:44:25.291681+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/pacc.html",
+    "bytes": 1228022,
+    "sha256": "9928bf442f8e9b6705d2d955c72677a27bb46555ebd2d509a460b1723592ad4f",
+    "file_modified_at": "2026-09-27T07:43:52.755299+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/hermfeed.html",
+    "bytes": 2584,
+    "sha256": "57839839e860946b8d19b9b24c84aeb34aa7588076da172b0586d7262e343f7a",
+    "file_modified_at": "2026-09-27T07:44:24.567891+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/paccfeed.html",
+    "bytes": 240434,
+    "sha256": "29b349045c11149984b6b424c83582919bec5a37c38e05114a12785ffe675c47",
+    "file_modified_at": "2026-09-27T07:44:25.750747+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/hermitage.html",
+    "bytes": 86744,
+    "sha256": "68edf516877373e1563cd4a12010355c0e1ef7435b61188234b1acc249b88650",
+    "file_modified_at": "2026-09-27T07:43:35.020605+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/hssa.html",
+    "bytes": 5366,
+    "sha256": "3e66959636774dc04e6de35b0d17635cacca09a4ef460a3ccd7e109d46be1b15",
+    "file_modified_at": "2026-09-27T07:43:52.452303+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/sacr.html",
+    "bytes": 93579,
+    "sha256": "ad93c8af4b3fa2130cfd40c8f0914d44ca77debb80a59389795cfbb1f5806acb",
+    "file_modified_at": "2026-09-27T07:43:53.208260+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/tucson-study/hopefeed.html",
+    "bytes": 225,
+    "sha256": "587045ccb173ad60e8995b947a7be19868239eabaae06891664482c291696847",
+    "file_modified_at": "2026-09-27T07:44:26.114661+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/vegas-research/hb.html",
+    "bytes": 148937,
+    "sha256": "05a82b6420ab769c79441957b06f0e6af06bcb6042f6a69d3294c3ba709b041d",
+    "file_modified_at": "2026-09-27T07:43:52.241589+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/vegas-research/nspca.html",
+    "bytes": 300,
+    "sha256": "8970d3ea6059606600e849b7d48adcae7d56b01a70cc5fa34b558cab199eb021",
+    "file_modified_at": "2026-09-27T07:43:52.332223+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/vegas-research/henderson.html",
+    "bytes": 573,
+    "sha256": "b403d94cb11d9052666383b74e962f7a8ba3e0f336e5dbdcc273eb02c811b96d",
+    "file_modified_at": "2026-09-27T07:43:52.632535+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/vegas-research/taf.html",
+    "bytes": 155124,
+    "sha256": "ab32b79cb6ef27357954c404afc49a93e94a5f316feaf92219efeec3fc2f1612",
+    "file_modified_at": "2026-09-27T07:43:52.027371+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  },
+  {
+    "local_temporary_file": "/private/tmp/vegas-research/hav.html",
+    "bytes": 5540,
+    "sha256": "6f080bd8f6371b94c5959347d9e0002233dd7c5e44536752c43ebe5c08fca42f",
+    "file_modified_at": "2026-09-27T07:43:52.427319+00:00",
+    "note": "mtime is local file time, not shelter update time; raw source payload not distributed"
+  }
+]

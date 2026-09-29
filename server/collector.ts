@@ -1,10 +1,11 @@
 import {database,migrate} from './db';
-import {beginScan,saveSource,readStore,nextCheck} from './store';
+import {beginScan,releaseScan,saveSource,readStore,nextCheck,type ScanFence} from './store';
 import {registry} from './providers/index';
+import {expireStaleScanJobs,getActiveScan,getLatestScan} from './jobs';
 import type {Inventory,Source} from '../src/types';
-export async function refresh(trigger='manual'){
+export async function refresh(trigger='manual',canContinue:()=>boolean=()=>true,fence?:ScanFence){
  const db=database();await migrate(db);
- const run=await beginScan(db,trigger);if(!run)return null;
+ const run=await beginScan(db,trigger,new Date(),fence);if(!run)return null;
  try{
   // Fetch concurrently, then persist sequentially to avoid competing SQLite transactions.
   const observations=await Promise.all(registry.filter(s=>s.connected&&s.collect).map(async s=>{
@@ -12,7 +13,7 @@ export async function refresh(trigger='manual'){
    try{const cats=await s.collect!();source.count=cats.length;source.lastSuccess=new Date().toISOString();source.message=`Read ${cats.length} listings`;return {source,cats};}
    catch{source.status='failed';source.message='Source could not be read. Previous listings retained; check the shelter directly.';return {source,cats:null};}
   }));
-  for(const o of observations){run.newCount+=await saveSource(db,o.source,o.cats,new Date().toISOString());run.sources.push(o.source);}
+  for(const o of observations){if(!canContinue())throw new Error('Scan worker lost its job lease');run.newCount+=await saveSource(db,o.source,o.cats,new Date().toISOString(),o.source.id,fence);run.sources.push(o.source);}
   const successes=observations.filter(o=>o.cats!==null).length;
   run.status=successes===observations.length&&successes>0?'success':successes?'partial':'failed';
  }catch(e){run.status='failed';throw e;}
@@ -20,11 +21,13 @@ export async function refresh(trigger='manual'){
   run.finishedAt=new Date().toISOString();
   await db.execute({sql:'UPDATE scans SET body=? WHERE id=?',args:[JSON.stringify(run),run.id]});
   await db.execute("DELETE FROM scans WHERE id NOT IN (SELECT id FROM scans ORDER BY started_at DESC LIMIT 100)");
+  if(!fence)await releaseScan(db,run);
  }
  return run;
 }
 export async function inventory():Promise<Inventory>{
- const db=database();await migrate(db);const data=await readStore(db);
+ const db=database();await migrate(db);await expireStaleScanJobs(db);const data=await readStore(db);
  const sources:Source[]=registry.map(s=>data.sources.find(o=>o.id===s.id)||{id:s.id,name:s.name,url:s.url,connected:s.connected,status:s.connected?'not_checked':'not_connected',count:0,lastSuccess:null,message:s.reason||'Not checked yet'});
- return {...data,sources,nextCheck:nextCheck(),lastSuccess:data.runs.find(r=>r.status==='success')?.finishedAt||null};
+ const [activeJob,latestJob]=await Promise.all([getActiveScan(db),getLatestScan(db)]);
+ return {...data,sources,activeJob,latestJob,nextCheck:nextCheck(),lastSuccess:data.runs.find(r=>r.status==='success')?.finishedAt||null};
 }

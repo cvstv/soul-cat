@@ -29,12 +29,12 @@ export function filterCats(cats:Cat[],f:Filters,saved:Set<string>){
  return cats.filter(c=>{
   if(!f.includeMissing&&c.availability!=='listed')return false;
   if(f.savedOnly&&!saved.has(c.key))return false;
-  if(f.city&&c.city!==f.city||f.source&&c.sourceId!==f.source)return false;
+  if(f.city&&c.city!==f.city&&!(c.city==='Unknown'&&c.sourceCity===f.city)||f.source&&c.sourceId!==f.source)return false;
   if(c.ageMonths===null){if(!f.unknownAge)return false;}else if(f.age){const [min,max]=bounds[f.age]||[0,Infinity];if(c.ageMonths<min||c.ageMonths>=max)return false;}
   if(f.sex&&lower(c.sex).split('/')[0].trim()!==f.sex)return false;
   if(f.breed&&!lower(c.breed).includes(lower(f.breed)))return false;
   if(f.coat&&!coatTerm(c.coat+' '+c.breed).includes(coatTerm(f.coat)))return false;
-  const text=coatTerm([c.name,c.breed,c.coat,c.shelter,c.city,c.description].join(' '));
+  const text=coatTerm([c.name,c.breed,c.coat,c.shelter,c.city,c.sourceCity||'',c.description].join(' '));
   return query.every(term=>text.includes(term));
  }).sort((a,b)=>{
   let comparison=0;

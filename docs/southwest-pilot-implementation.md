@@ -7,7 +7,7 @@ This change is local repository work until reviewed and deployed. It does not ac
 - One Shelterluv collector configured for Hermitage (Tucson, public organization 38723) and Homeward Bound (Las Vegas, public organization 5575). It reads the public widget array, requires cat species, unique organization-prefixed IDs and exact Shelterluv profile links, and saves only selected public fields. The saved public responses from the September 27 study parsed as 148 and 70 cats.
 - A rescue-area city value for the new listings. A Tucson/Las Vegas city filter can include cats whose individual placement is unknown; cards say the cat's location is unconfirmed. This is **not** a mileage search or a verified cat coordinate.
 - Scope memberships around the existing cats table. A complete scope can mark a cat absent only when no other scope still lists it. Existing listed cats are backfilled once into their legacy scope. Failed source reads keep previous listings.
-- Durable `scan_jobs` with one active scan, a five-minute shared cooldown, worker leases and token-based completion. The public API enqueues work; a signed Netlify background function executes it. The scheduled function dispatches that same job path. The UI polls while work is queued/running.
+- Durable `scan_jobs` with one active scan, a five-minute cooldown, worker leases and token-based completion. The scheduled function enqueues work and invokes a signed Netlify background function. The public API only reads inventory; opening or reloading the page never scans source sites. The UI polls while a known job is queued or running.
 
 ## Local and Netlify setup
 

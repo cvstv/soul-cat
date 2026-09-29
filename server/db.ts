@@ -1,10 +1,11 @@
 import {createClient, type Client} from '@libsql/client';
 import {mkdirSync} from 'node:fs';
+import {isNetlifyRuntime} from './scan-context';
 let instance:Client|undefined;
 export function database(){
  if(!instance){
   const url=process.env.TURSO_DATABASE_URL;
-  if(process.env.NETLIFY && !url)throw new Error('Set TURSO_DATABASE_URL and TURSO_AUTH_TOKEN in Netlify.');
+  if(isNetlifyRuntime(process.env) && !url)throw new Error('Set TURSO_DATABASE_URL and TURSO_AUTH_TOKEN in Netlify.');
   if(!url)mkdirSync('.data',{recursive:true});
   instance=createClient({url:url||'file:.data/soul-cat.db',authToken:process.env.TURSO_AUTH_TOKEN});
  }

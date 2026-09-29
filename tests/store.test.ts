@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import {createClient} from '@libsql/client';
 import {migrate} from '../server/db';
 import {beginScan,releaseScan,saveSource,readStore,nextCheck} from '../server/store';
+import {enqueueScan,claimScan} from '../server/jobs';
 import type {Listing,Source} from '../src/types';
 const source:Source={id:'test',name:'Test',url:'https://example.org',connected:true,status:'checked',count:1,lastSuccess:'2026-09-12T00:00:00Z',message:''};
 const cat:Listing={sourceId:'test',animalId:'1',name:'Cat',ageMonths:3,sex:'Female',breed:'Domestic',coat:'Tortoiseshell',confirmation:'confirmed',shelter:'Test',city:'Unknown',location:'Unknown',photo:null,adoptionUrl:'https://example.org/cat',adoptionFee:null,description:''};
@@ -25,6 +26,18 @@ test('completed scan releases its own lock without releasing a successor lock',a
  await releaseScan(db,first!);
  assert.equal(await beginScan(db,'manual',new Date(+now+2000)),null);
  await releaseScan(db,second!);db.close();
+});
+test('background retry can bypass a crashed scan lock but stale worker cannot save',async()=>{
+ const db=createClient({url:'file::memory:'});await migrate(db);
+ const now=new Date();
+ assert.ok(await beginScan(db,'manual',now));
+ const job=await enqueueScan(db,'scheduled',+now);assert.ok(job);
+ const first=await claimScan(db,job.id,+now+1);assert.ok(first);
+ assert.ok(await beginScan(db,'scheduled',new Date(+now+2),{id:job.id,token:first.token}));
+ const retry=await claimScan(db,job.id,first.leaseUntil+1);assert.ok(retry);
+ await assert.rejects(saveSource(db,{...source},[cat],new Date().toISOString(),source.id,{id:job.id,token:first.token}));
+ assert.equal(await saveSource(db,{...source},[cat],new Date().toISOString(),source.id,{id:job.id,token:retry!.token}),1);
+ db.close();
 });
 test('schedule is 8am, 1pm, 5pm Phoenix including UTC day rollover',()=>{
  assert.equal(nextCheck(new Date('2026-09-12T14:59:00Z')),'2026-09-12T15:00:00.000Z');

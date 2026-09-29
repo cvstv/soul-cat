@@ -2,7 +2,7 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {createClient} from '@libsql/client';
 import {migrate} from '../server/db';
-import {enqueueScan,claimScan,finishScan,getScanJob,getLatestScan,failQueuedScan,expireStaleScanJobs} from '../server/jobs';
+import {enqueueScan,claimScan,renewScanLease,finishScan,getScanJob,getLatestScan,failQueuedScan,expireStaleScanJobs} from '../server/jobs';
 
 test('duplicate dispatch joins one durable job and only one worker can claim it',async()=>{
  const db=createClient({url:'file::memory:'});await migrate(db);
@@ -26,6 +26,23 @@ test('expired lease can be reclaimed and old worker cannot publish completion',a
  assert.notEqual(next!.token,old!.token);
  assert.equal(await finishScan(db,job.id,old!.token,'success',next!.leaseUntil-1),false);
  assert.equal(await finishScan(db,job.id,next!.token,'failed',next!.leaseUntil-1),true);
+ assert.equal((await getScanJob(db,job.id))?.status,'failed');
+ db.close();
+});
+test('heartbeat keeps an active worker leased; crash leaves time for platform retry',async()=>{
+ const db=createClient({url:'file::memory:'});await migrate(db);
+ const job=await enqueueScan(db,'manual',1000);assert.ok(job);
+ const worker=await claimScan(db,job.id,1001);assert.ok(worker);
+ const renewed=await renewScanLease(db,job.id,worker.token,worker.leaseUntil-1000);
+ assert.equal(renewed,true);
+ assert.equal(await claimScan(db,job.id,worker.leaseUntil+1),null);
+ const lease=(await getScanJob(db,job.id))!.leaseUntil!;
+ await expireStaleScanJobs(db,lease+60000);
+ assert.equal((await getScanJob(db,job.id))?.status,'running');
+ assert.equal((await enqueueScan(db,'scheduled',lease+60000))?.id,job.id);
+ const retry=await claimScan(db,job.id,lease+60000);assert.ok(retry);
+ assert.equal(await renewScanLease(db,job.id,worker.token,lease+60001),false);
+ await expireStaleScanJobs(db,retry!.leaseUntil+180001);
  assert.equal((await getScanJob(db,job.id))?.status,'failed');
  db.close();
 });

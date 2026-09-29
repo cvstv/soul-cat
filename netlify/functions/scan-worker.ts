@@ -1,7 +1,9 @@
 import type {Config} from '@netlify/functions';
 import {runScanJob} from '../../server/scan-dispatch';
 import {verifyJobSignature} from '../../server/worker-auth';
+import {scanAllowedHere} from '../../server/scan-context';
 export default async(req:Request)=>{
+ if(!scanAllowedHere(process.env))return new Response(null,{status:403});
  if(req.method!=='POST')return new Response(null,{status:405});
  const body=await req.json().catch(()=>null);
  const id=body&&typeof body.id==='string'?body.id:'';

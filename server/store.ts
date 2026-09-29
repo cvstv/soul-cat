@@ -1,10 +1,16 @@
 import type {Client, InStatement} from '@libsql/client';
 import type {Cat,Listing,Scan,Source} from '../src/types';
-export async function beginScan(db:Client,trigger:string,now=new Date()):Promise<Scan|null>{
+export interface ScanFence {id:string;token:string}
+export async function beginScan(db:Client,trigger:string,now=new Date(),fence?:ScanFence):Promise<Scan|null>{
  const tx=await db.transaction('write');
  try{
-  const lock=await tx.execute({sql:`INSERT INTO locks(name,expires) VALUES('scan',?) ON CONFLICT(name) DO UPDATE SET expires=excluded.expires WHERE locks.expires<=? RETURNING name`,args:[now.getTime()+300000,now.getTime()]});
-  if(!lock.rows.length){await tx.rollback();return null;}
+  if(fence){
+   const lease=await tx.execute({sql:"SELECT id FROM scan_jobs WHERE id=? AND status='running' AND lease_token=? AND lease_until>=?",args:[fence.id,fence.token,now.getTime()]});
+   if(!lease.rows.length){await tx.rollback();return null;}
+  }else{
+   const lock=await tx.execute({sql:`INSERT INTO locks(name,expires) VALUES('scan',?) ON CONFLICT(name) DO UPDATE SET expires=excluded.expires WHERE locks.expires<=? RETURNING name`,args:[now.getTime()+300000,now.getTime()]});
+   if(!lock.rows.length){await tx.rollback();return null;}
+  }
   const scan:Scan={id:crypto.randomUUID(),startedAt:now.toISOString(),finishedAt:null,trigger,status:'running',newCount:0,sources:[]};
   await tx.execute({sql:'INSERT INTO scans(id,started_at,body) VALUES(?,?,?)',args:[scan.id,scan.startedAt,JSON.stringify(scan)]});
   await tx.commit();return scan;
@@ -13,9 +19,13 @@ export async function beginScan(db:Client,trigger:string,now=new Date()):Promise
 export async function releaseScan(db:Client,run:Scan):Promise<void>{
  await db.execute({sql:"DELETE FROM locks WHERE name='scan' AND expires=?",args:[Date.parse(run.startedAt)+300000]});
 }
-export async function saveSource(db:Client,source:Source,listings:Listing[]|null,now:string,scopeId=source.id){
+export async function saveSource(db:Client,source:Source,listings:Listing[]|null,now:string,scopeId=source.id,fence?:ScanFence){
  const tx=await db.transaction('write');let added=0;
  try{
+  if(fence){
+   const lease=await tx.execute({sql:"SELECT id FROM scan_jobs WHERE id=? AND status='running' AND lease_token=? AND lease_until>=?",args:[fence.id,fence.token,Date.now()]});
+   if(!lease.rows.length)throw new Error('Scan worker lost its job lease');
+  }
   if(listings!==null){
    const old=await tx.execute({sql:'SELECT key,first_seen,body FROM cats WHERE source_id=?',args:[source.id]});
    const seen=new Map(old.rows.map(r=>[String(r.key),String(r.first_seen)]));
@@ -43,6 +53,10 @@ export async function saveSource(db:Client,source:Source,listings:Listing[]|null
    if(previous.rows[0]){const old=JSON.parse(String(previous.rows[0].body)) as Source;source.lastSuccess=old.lastSuccess;source.count=old.count;}
   }
   await tx.execute({sql:'INSERT INTO sources(id,body) VALUES(?,?) ON CONFLICT(id) DO UPDATE SET body=excluded.body',args:[source.id,JSON.stringify(source)]});
+  if(fence){
+   const lease=await tx.execute({sql:"SELECT id FROM scan_jobs WHERE id=? AND status='running' AND lease_token=? AND lease_until>=?",args:[fence.id,fence.token,Date.now()]});
+   if(!lease.rows.length)throw new Error('Scan worker lost its job lease');
+  }
   await tx.commit();return added;
  }catch(e){await tx.rollback();throw e;}finally{tx.close();}
 }
